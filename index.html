@@ -10,68 +10,106 @@
 <body class="bg-[url(assets/images/bg.png)] bg-center bg-cover bg-fixed text-gray-800 font-sans">
   <div class="min-h-screen flex flex-col items-center justify-center py-8">
     <!-- Profile Section -->
-    <div class="bg-white/30 backdrop-blur-lg border border-white border-opacity-30 shadow-sm rounded-lg p-6 text-center w-full max-w-md">
+    <div class="bg-white/30 backdrop-blur-lg border border-white border-opacity-30 shadow-sm rounded-lg p-6 text-center w-full max-w-2xl">
       <img src="./assets/images/profile.jpg" alt="Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4">
       <p class="text-sm font-serif">はやしばらめぐみ</p>
       <h1 class="text-3xl font-bold font-serif">林原愛</h1>
       <p class="">（本名：和田愛）</p>
-      <p class="mt-3">ディレクター<br>WEBエンジニア・デザイナー</p>
+      <p class="mt-3">プロダクトマネージャー / テクニカルディレクター</p>
+      <p class="mt-1">WEBエンジニア / UIUXデザイナー</p>
+      <p class="mt-2 text-sm">プロダクト開発から技術実装まで、<br>一貫した支援を提供します。</p>
     </div>
 
     <!-- Links Section -->
-    <div class="mt-6 w-full max-w-md flex flex-wrap justify-center gap-4">
-      <a href="mailto:info@meggumi.com" class="flex flex-col items-center justify-center w-[calc(33.333%-1rem)] bg-pink-500/50 backdrop-blur-md border border-white/40 py-4 rounded-lg shadow-sm hover:bg-pink-500/80 hover:text-white transition-all duration-300">
-        <i class="fa-solid fa-envelope text-xl mb-1"></i>
-        <span class="text-sm font-medium">Email</span>
-      </a>
-      <a href="https://m.me/megumi.hayashibara" class="flex flex-col items-center justify-center w-[calc(33.333%-1rem)] bg-pink-500/50 backdrop-blur-md border border-white/40 py-4 rounded-lg shadow-sm hover:bg-pink-500/80 hover:text-white transition-all duration-300">
-        <i class="fa-brands fa-facebook-messenger text-xl mb-1"></i>
-        <span class="text-sm font-medium">Messenger</span>
-      </a>
-      <a href="https://twitter.com/gumigumih" class="flex flex-col items-center justify-center w-[calc(33.333%-1rem)] bg-pink-500/50 backdrop-blur-md border border-white/40 py-4 rounded-lg shadow-sm hover:bg-pink-500/80 hover:text-white transition-all duration-300">
-        <i class="fa-brands fa-x-twitter text-xl mb-1"></i>
-        <span class="text-sm font-medium">X</span>
-      </a>
-      <!-- <a href="https://github.com/gumigumih" class="flex flex-col items-center justify-center w-[calc(33.333%-1rem)] bg-sky-500/50 backdrop-blur-md border border-white/40 py-4 rounded-lg shadow-sm hover:bg-sky-500/80 hover:text-white transition-all duration-300">
-        <i class="fa-brands fa-github text-xl mb-1"></i>
-        <span class="text-sm font-medium">GitHub</span>
-      </a> -->
-      <a href="https://zenn.dev/gumigumih" class="flex flex-col items-center justify-center w-[calc(33.333%-1rem)] bg-sky-500/50 backdrop-blur-md border border-white/40 py-4 rounded-lg shadow-sm hover:bg-sky-500/80 hover:text-white transition-all duration-300">
-        <i class="fa-brands fa-readme text-xl mb-1"></i>
-        <span class="text-sm font-medium">Zenn</span>
-      </a>
-      <a href="https://qiita.com/gumigumih" class="flex flex-col items-center justify-center w-[calc(33.333%-1rem)] bg-sky-500/50 backdrop-blur-md border border-white/40 py-4 rounded-lg shadow-sm hover:bg-sky-500/80 hover:text-white transition-all duration-300">
-        <i class="fa-brands fa-readme text-xl mb-1"></i>
-        <span class="text-sm font-medium">Qiita</span>
-      </a>
+    <div class="mt-6 w-full max-w-2xl">
+      <h2 class="text-lg font-bold font-serif mb-4 text-center">Contact & Social</h2>
+      <div class="flex flex-wrap justify-center gap-4">
+        <!-- 連絡先 -->
+        <a href="mailto:info@meggumi.com" class="flex flex-col items-center justify-center w-[calc(33.333%-1rem)] bg-pink-500/50 backdrop-blur-md border border-white/40 py-4 rounded-lg shadow-sm hover:bg-pink-500/80 hover:text-white transition-all duration-300">
+          <i class="fa-solid fa-envelope text-xl mb-1"></i>
+          <span class="text-sm font-medium">Email</span>
+        </a>
+        <a href="https://m.me/megumi.hayashibara" class="flex flex-col items-center justify-center w-[calc(33.333%-1rem)] bg-pink-500/50 backdrop-blur-md border border-white/40 py-4 rounded-lg shadow-sm hover:bg-pink-500/80 hover:text-white transition-all duration-300">
+          <i class="fa-brands fa-facebook-messenger text-xl mb-1"></i>
+          <span class="text-sm font-medium">Messenger</span>
+        </a>
+        <a href="https://twitter.com/gumigumih" class="flex flex-col items-center justify-center w-[calc(33.333%-1rem)] bg-pink-500/50 backdrop-blur-md border border-white/40 py-4 rounded-lg shadow-sm hover:bg-pink-500/80 hover:text-white transition-all duration-300">
+          <i class="fa-brands fa-x-twitter text-xl mb-1"></i>
+          <span class="text-sm font-medium">X</span>
+        </a>
+      </div>
+
+      <h2 class="text-lg font-bold font-serif mb-4 mt-6 text-center">Tech & Blog</h2>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://github.com/gumigumih" class="flex flex-col items-center justify-center w-[calc(33.333%-1rem)] bg-sky-500/50 backdrop-blur-md border border-white/40 py-4 rounded-lg shadow-sm hover:bg-sky-500/80 hover:text-white transition-all duration-300">
+          <i class="fa-brands fa-github text-xl mb-1"></i>
+          <span class="text-sm font-medium">GitHub</span>
+        </a>
+        <a href="https://zenn.dev/gumigumih" class="flex flex-col items-center justify-center w-[calc(33.333%-1rem)] bg-sky-500/50 backdrop-blur-md border border-white/40 py-4 rounded-lg shadow-sm hover:bg-sky-500/80 hover:text-white transition-all duration-300">
+          <i class="fa fa-book text-xl mb-1"></i>
+          <span class="text-sm font-medium">Zenn</span>
+        </a>
+        <a href="https://qiita.com/gumigumih" class="flex flex-col items-center justify-center w-[calc(33.333%-1rem)] bg-sky-500/50 backdrop-blur-md border border-white/40 py-4 rounded-lg shadow-sm hover:bg-sky-500/80 hover:text-white transition-all duration-300">
+          <i class="fa-brands fa-readme text-xl mb-1"></i>
+          <span class="text-sm font-medium">Qiita</span>
+        </a>
+      </div>
+
+      <h2 class="text-lg font-bold font-serif mb-4 mt-6 text-center">Personal Apps</h2>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://meggumi.com" class="flex flex-col items-center justify-center w-full bg-purple-500/50 backdrop-blur-md border border-white/40 py-4 rounded-lg shadow-sm hover:bg-purple-500/80 hover:text-white transition-all duration-300">
+          <i class="fa-solid fa-mobile-screen-button text-xl mb-1"></i>
+          <span class="text-sm font-medium">個人開発アプリ一覧</span>
+        </a>
+      </div>
     </div>
 
-    <!-- 経験 Section -->
-    <div class="mt-6 bg-white/30 backdrop-blur-lg border border-white border-opacity-30 shadow-sm rounded-lg p-6 w-full max-w-md">
-      <h2 class="text-lg font-bold font-serif mb-4">能力</h2>
+    <!-- Background Section -->
+    <div class="mt-6 bg-white/30 backdrop-blur-lg border border-white border-opacity-30 shadow-sm rounded-lg p-6 w-full max-w-2xl">
+      <h2 class="text-lg font-bold font-serif mb-4">経歴・経験</h2>
+      <div class="text-sm text-gray-600 space-y-3">
+        <p>10年以上のWEB開発経験を持ち、<span class="font-bold">WEBサイト制作からアプリ開発まで</span>、<br>数ヶ月の短期案件から年単位の長期プロジェクトまで<br>幅広い開発経験があります。</p>
+        <p><span class="font-bold">Webアプリケーション、業務システム、<br>デジタルコンテンツ、アバター活用、<br>AR/VR</span>など、多様な分野のプロダクト開発に携わってきました。</p>
+        <p><span class="font-bold">メインプロジェクトマネージャー</span>として要件定義から納品までを担当し、<br>外注管理やチームマネジメントの経験も豊富です。</p>
+        <p><span class="font-bold">WebエンジニアリングとUIUXデザイン</span>の実務経験を活かし、<br>プロジェクト全体の方向性を定め、チームを導いてきました。</p>
+        <p>技術的な知見とプロダクトマネジメントの両面から、<br>クライアントの課題解決をサポートします。</p>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="mt-6 bg-white/30 backdrop-blur-lg border border-white border-opacity-30 shadow-sm rounded-lg p-6 w-full max-w-2xl">
+      <h2 class="text-lg font-bold font-serif mb-4">支援内容</h2>
       <ul class="list-none pl-0 space-y-4">
         <li class="flex items-start group">
           <span class="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
           <div class="flex-1">
-            <div class="font-medium">ディレクション</div>
-            <div class="text-sm mt-1">
-              プロジェクト管理
-              <br>開発・制作進行管理
-              <br>システム設計
-              <br>運用改善サポート
+            <div class="font-medium">プロダクト開発支援</div>
+            <div class="text-sm mt-1 text-gray-600">
+              ・要件定義・仕様設計支援<br>
+              ・開発計画・スケジュール管理<br>
+              ・品質管理・テスト計画支援
             </div>
           </div>
         </li>
         <li class="flex items-start group">
           <span class="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
           <div class="flex-1">
-            <div class="font-medium">WEB開発・デザイン</div>
-            <div class="text-sm mt-1">
-              Webサイト・WEBアプリ開発
-              <br>Wordpressサイト構築
-              <br>Webデザイン
-              <br>UX・UIデザイン
-              <br>GASアプリ開発
+            <div class="font-medium">技術開発支援</div>
+            <div class="text-sm mt-1 text-gray-600">
+              ・フロントエンド開発支援<br>
+              ・UI/UX設計・実装支援<br>
+              ・API開発・システム設計支援
+            </div>
+          </div>
+        </li>
+        <li class="flex items-start group">
+          <span class="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+          <div class="flex-1">
+            <div class="font-medium">業務効率化支援</div>
+            <div class="text-sm mt-1 text-gray-600">
+              ・Google Apps Script開発<br>
+              ・業務自動化ツール開発<br>
+              ・データ分析・可視化支援
             </div>
           </div>
         </li>
@@ -79,71 +117,40 @@
     </div>
 
     <!-- 実績 Section -->
-    <div class="mt-6 bg-white/30 backdrop-blur-lg border border-white border-opacity-30 shadow-sm rounded-lg p-6 w-full max-w-md">
-      <h2 class="text-lg font-bold font-serif mb-4">経験・実績</h2>
+    <div class="mt-6 bg-white/30 backdrop-blur-lg border border-white border-opacity-30 shadow-sm rounded-lg p-6 w-full max-w-2xl">
+      <h2 class="text-lg font-bold font-serif mb-4">主要プロジェクト</h2>
       <ul class="list-none pl-0 space-y-4">
-        <!-- 項目テンプレート -->
         <li class="flex items-start group">
           <span class="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
           <div class="flex-1">
-            <div class="font-medium">VTuberTV番組技術サポート</div>
-            <div class="text-sm mt-1">機材設営・現場ディレクション<br>アバター変換・ステージ制作</div>
+            <div class="font-medium">AI-KATA S2P</div>
+            <div class="text-sm mt-1">
+              <span class="text-gray-600">Laravel / Vue.js / Stripe</span>
+              <br>プロダクト戦略・UI/UX設計
+              <br>サブスクリプション課金システム構築
+            </div>
           </div>
         </li>
         <li class="flex items-start">
           <span class="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
           <div class="flex-1">
-            <div class="font-medium">YouTube非公開予約アプリ</div>
-            <div class="text-sm mt-1">Google Apps Script（GAS）の開発・管理画面の実装</div>
+            <div class="font-medium">NICE CAMERA</div>
+            <div class="text-sm mt-1">
+              <span class="text-gray-600">Vue.js / Laravel / Docker</span>
+              <br>プロダクトマネジメント・開発指揮
+              <br>CI/CD導入・チーム体制整備
+            </div>
           </div>
         </li>
         <li class="flex items-start">
           <span class="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
           <div class="flex-1">
-            <div class="font-medium">お菓子パッケージARコンテンツ</div>
-            <div class="text-sm mt-1">WEBAR・顔ハメAR・ワードクイズ・Twitter BOTの実装</div>
-          </div>
-        </li>
-        <li class="flex items-start">
-          <span class="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-          <div class="flex-1">
-            <div class="font-medium">バーチャル名刺ジェネレーター</div>
-            <div class="text-sm mt-1">UI/UX設計・WEBアプリ実装(Vue.js)</div>
-          </div>
-        </li>
-        <li class="flex items-start">
-          <span class="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-          <div class="flex-1">
-            <div class="font-medium">TV番組アバター制作</div>
-            <div class="text-sm mt-1">キャラクター制作管理・モーション撮影ディレクション</div>
-          </div>
-        </li>
-        <li class="flex items-start">
-          <span class="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-          <div class="flex-1">
-            <div class="font-medium">アバター会議アプリ</div>
-            <div class="text-sm mt-1">開発の指揮・UIデザイン<br>サービスWEBサイト制作<br>アカウント管理サーバーの構築・サブスクリプション課金システムの導入</div>
-          </div>
-        </li>
-        <li class="flex items-start">
-          <span class="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-          <div class="flex-1">
-            <div class="font-medium">自分の絵とAI会話アプリ</div>
-            <div class="text-sm mt-1">UIデザイン<br>サービスWEBサイト制作<br>アカウント管理サーバーの構築・サブスクリプション課金システムの導入</div>
-          </div>
-        </li>
-        <li class="flex items-start">
-          <span class="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-          <div class="flex-1">
-            <div class="font-medium">ひきこもりアバター支援アプリ</div>
-            <div class="text-sm mt-1">プロジェクト統括・アバター制作・UIデザイン</div>
-          </div>
-        </li>
-        <li class="flex items-start">
-          <span class="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-          <div class="flex-1">
-            <div class="font-medium">寺社観光コンテンツ</div>
-            <div class="text-sm mt-1">プロジェクト統括・ARマンガ実装<br>ツアー紹介WEBサイトの制作<br>体験写真DLサイトの実装<br>AI音声生成の音声ガイドの実装</div>
+            <div class="font-medium">デジタル歴史体験プロジェクト</div>
+            <div class="text-sm mt-1">
+              <span class="text-gray-600">Vue.js / WebAR / AI音声</span>
+              <br>プロジェクト統括・UI/UX設計
+              <br>多言語対応システム構築
+            </div>
           </div>
         </li>
       </ul>
