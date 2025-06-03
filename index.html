@@ -8,69 +8,73 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-[url(assets/images/bg.png)] bg-center bg-cover bg-fixed text-gray-800 font-sans">
-  <div class="min-h-screen flex flex-col items-center justify-center py-8">
+  <div class="min-h-screen flex flex-col items-center justify-center py-8 px-4">
     <!-- Profile Section -->
-    <div class="bg-white/30 backdrop-blur-lg border border-white border-opacity-30 shadow-sm rounded-lg p-6 text-center w-full max-w-2xl">
-      <img src="./assets/images/profile.jpg" alt="Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4">
-      <p class="text-sm font-serif">はやしばらめぐみ</p>
-      <h1 class="text-3xl font-bold font-serif">林原愛</h1>
-      <p class="">（本名：和田愛）</p>
-      <p class="mt-3">プロダクトマネージャー / テクニカルディレクター</p>
-      <p class="mt-1">WEBエンジニア / UIUXデザイナー</p>
-      <p class="mt-2 text-sm">プロダクト開発から技術実装まで、<br>一貫した支援を提供します。</p>
+    <div class="bg-gradient-to-br from-white/50 to-white/30 backdrop-blur-xl border border-white/60 shadow-lg rounded-2xl p-6 md:p-10 text-center w-[95%] max-w-4xl">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
+        <img src="./assets/images/profile.jpg" alt="Profile Picture" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover ring-4 ring-white/50 flex-shrink-0">
+        <div class="text-center md:text-left">
+          <p class="text-sm font-serif text-gray-600">はやしばらめぐみ</p>
+          <h1 class="text-3xl md:text-4xl font-bold font-serif mt-1">林原愛</h1>
+          <p class="text-gray-600">（本名：和田愛）</p>
+          <p class="mt-4 md:mt-5 text-gray-700">プロダクトマネージャー / テクニカルディレクター</p>
+          <p class="mt-1 text-gray-700">WEBエンジニア / UIUXデザイナー</p>
+          <p class="mt-3 md:mt-4 text-sm text-gray-600">プロダクト開発から技術実装まで、<br>一貫した支援を提供します。</p>
+        </div>
+      </div>
     </div>
 
     <!-- Links Section -->
-    <div class="mt-6 w-full max-w-2xl">
-      <h2 class="text-lg font-bold font-serif mb-4 text-center">Contact & Social</h2>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="mailto:info@meggumi.com" class="flex flex-col items-center justify-center w-[calc(33.333%-1rem)] bg-pink-300/80 backdrop-blur-md border border-white/40 py-4 rounded-lg shadow-sm hover:bg-pink-300/50 hover:scale-105 transition-all duration-300">
-          <i class="fa-solid fa-envelope text-xl mb-1"></i>
-          <span class="text-sm font-medium">Email</span>
+    <div class="mt-8 md:mt-10 w-full max-w-3xl">
+      <h2 class="text-lg font-bold font-serif mb-4 md:mb-5 text-center text-gray-700">Contact & Social</h2>
+      <div class="flex flex-wrap justify-center gap-3 md:gap-4">
+        <a href="mailto:info@meggumi.com" class="flex flex-col items-center justify-center w-[calc(33.333%-0.5rem)] md:w-[calc(33.333%-1rem)] bg-white/30 backdrop-blur-md border border-white/40 py-4 md:py-5 rounded-xl shadow-sm hover:bg-white/40 hover:scale-105 transition-all duration-300">
+          <i class="fa-solid fa-envelope text-xl md:text-2xl mb-1 md:mb-2 text-gray-700"></i>
+          <span class="text-sm font-medium text-gray-700">Email</span>
         </a>
-        <a href="https://m.me/megumi.hayashibara" class="flex flex-col items-center justify-center w-[calc(33.333%-1rem)] bg-pink-300/80 backdrop-blur-md border border-white/40 py-4 rounded-lg shadow-sm hover:bg-pink-300/50 hover:scale-105 transition-all duration-300">
-          <i class="fa-brands fa-facebook-messenger text-xl mb-1"></i>
-          <span class="text-sm font-medium">Messenger</span>
+        <a href="https://m.me/megumi.hayashibara" class="flex flex-col items-center justify-center w-[calc(33.333%-0.5rem)] md:w-[calc(33.333%-1rem)] bg-white/30 backdrop-blur-md border border-white/40 py-4 md:py-5 rounded-xl shadow-sm hover:bg-white/40 hover:scale-105 transition-all duration-300">
+          <i class="fa-brands fa-facebook-messenger text-xl md:text-2xl mb-1 md:mb-2 text-gray-700"></i>
+          <span class="text-sm font-medium text-gray-700">Messenger</span>
         </a>
-        <a href="https://twitter.com/gumigumih" class="flex flex-col items-center justify-center w-[calc(33.333%-1rem)] bg-pink-300/80 backdrop-blur-md border border-white/40 py-4 rounded-lg shadow-sm hover:bg-pink-300/50 hover:scale-105 transition-all duration-300">
-          <i class="fa-brands fa-x-twitter text-xl mb-1"></i>
-          <span class="text-sm font-medium">X</span>
-        </a>
-      </div>
-
-      <h2 class="text-lg font-bold font-serif mb-4 mt-6 text-center">Tech & Blog</h2>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="https://github.com/gumigumih" class="flex flex-col items-center justify-center w-[calc(25%-0.75rem)] bg-stone-300/80 backdrop-blur-md border border-stone-200/40 py-4 rounded-lg shadow-sm hover:bg-stone-300/50 hover:scale-105 transition-all duration-300">
-          <i class="fa-brands fa-github text-xl mb-1"></i>
-          <span class="text-sm font-medium">GitHub</span>
-        </a>
-        <a href="https://zenn.dev/gumigumih" class="flex flex-col items-center justify-center w-[calc(25%-0.75rem)] bg-stone-300/80 backdrop-blur-md border border-stone-200/40 py-4 rounded-lg shadow-sm hover:bg-stone-300/50 hover:scale-105 transition-all duration-300">
-          <img src="./assets/images/zenn-logo.svg" alt="Zenn" class="h-6 mb-1">
-          <span class="text-sm font-medium">Zenn</span>
-        </a>
-        <a href="https://qiita.com/gumigumih" class="flex flex-col items-center justify-center w-[calc(25%-0.75rem)] bg-stone-300/80 backdrop-blur-md border border-stone-200/40 py-4 rounded-lg shadow-sm hover:bg-stone-300/50 hover:scale-105 transition-all duration-300">
-          <img src="./assets/images/qiita-icon.png" alt="Qiita" class="h-6 mb-1">
-          <span class="text-sm font-medium">Qiita</span>
-        </a>
-        <a href="https://note.com/gumigumih" class="flex flex-col items-center justify-center w-[calc(25%-0.75rem)] bg-stone-300/80 backdrop-blur-md border border-stone-200/40 py-4 rounded-lg shadow-sm hover:bg-stone-300/50 hover:scale-105 transition-all duration-300">
-          <img src="./assets/images/note-icon.svg" alt="note" class="h-6 mb-1">
-          <span class="text-sm font-medium">note</span>
+        <a href="https://twitter.com/gumigumih" class="flex flex-col items-center justify-center w-[calc(33.333%-0.5rem)] md:w-[calc(33.333%-1rem)] bg-white/30 backdrop-blur-md border border-white/40 py-4 md:py-5 rounded-xl shadow-sm hover:bg-white/40 hover:scale-105 transition-all duration-300">
+          <i class="fa-brands fa-x-twitter text-xl md:text-2xl mb-1 md:mb-2 text-gray-700"></i>
+          <span class="text-sm font-medium text-gray-700">X</span>
         </a>
       </div>
 
-      <h2 class="text-lg font-bold font-serif mb-4 mt-6 text-center">Personal Apps</h2>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="https://meggumi.com" class="flex flex-col items-center justify-center w-full bg-sky-300/80 backdrop-blur-md border border-white/40 py-4 rounded-lg shadow-sm hover:bg-sky-300/50 hover:scale-105 transition-all duration-300">
-          <i class="fa-solid fa-mobile-screen-button text-xl mb-1"></i>
-          <span class="text-sm font-medium">個人開発アプリ一覧</span>
+      <h2 class="text-lg font-bold font-serif mb-4 md:mb-5 mt-8 md:mt-10 text-center text-gray-700">Tech & Blog</h2>
+      <div class="flex flex-wrap justify-center gap-3 md:gap-4">
+        <a href="https://github.com/gumigumih" class="flex flex-col items-center justify-center w-[calc(50%-0.375rem)] md:w-[calc(25%-0.75rem)] bg-white/30 backdrop-blur-md border border-white/40 py-4 md:py-5 rounded-xl shadow-sm hover:bg-white/40 hover:scale-105 transition-all duration-300">
+          <i class="fa-brands fa-github text-xl md:text-2xl mb-1 md:mb-2 text-gray-700"></i>
+          <span class="text-sm font-medium text-gray-700">GitHub</span>
+        </a>
+        <a href="https://zenn.dev/gumigumih" class="flex flex-col items-center justify-center w-[calc(50%-0.375rem)] md:w-[calc(25%-0.75rem)] bg-white/30 backdrop-blur-md border border-white/40 py-4 md:py-5 rounded-xl shadow-sm hover:bg-white/40 hover:scale-105 transition-all duration-300">
+          <img src="./assets/images/zenn-logo.svg" alt="Zenn" class="h-6 md:h-7 mb-1 md:mb-2">
+          <span class="text-sm font-medium text-gray-700">Zenn</span>
+        </a>
+        <a href="https://qiita.com/gumigumih" class="flex flex-col items-center justify-center w-[calc(50%-0.375rem)] md:w-[calc(25%-0.75rem)] bg-white/30 backdrop-blur-md border border-white/40 py-4 md:py-5 rounded-xl shadow-sm hover:bg-white/40 hover:scale-105 transition-all duration-300">
+          <img src="./assets/images/qiita-icon.png" alt="Qiita" class="h-6 md:h-7 mb-1 md:mb-2">
+          <span class="text-sm font-medium text-gray-700">Qiita</span>
+        </a>
+        <a href="https://note.com/gumigumih" class="flex flex-col items-center justify-center w-[calc(50%-0.375rem)] md:w-[calc(25%-0.75rem)] bg-white/30 backdrop-blur-md border border-white/40 py-4 md:py-5 rounded-xl shadow-sm hover:bg-white/40 hover:scale-105 transition-all duration-300">
+          <img src="./assets/images/note-icon.svg" alt="note" class="h-6 md:h-7 mb-1 md:mb-2">
+          <span class="text-sm font-medium text-gray-700">note</span>
+        </a>
+      </div>
+
+      <h2 class="text-lg font-bold font-serif mb-4 md:mb-5 mt-8 md:mt-10 text-center text-gray-700">Work</h2>
+      <div class="flex flex-wrap justify-center gap-3 md:gap-4">
+        <a href="https://meggumi.com" class="flex flex-col items-center justify-center w-full bg-gradient-to-r from-white/40 to-white/30 backdrop-blur-md border border-white/40 py-4 md:py-5 rounded-xl shadow-sm hover:from-white/50 hover:to-white/40 hover:scale-105 transition-all duration-300">
+          <i class="fa-solid fa-briefcase text-xl md:text-2xl mb-1 md:mb-2 text-gray-700"></i>
+          <span class="text-sm font-medium text-gray-700">お仕事のサイトはこちら</span>
         </a>
       </div>
     </div>
 
     <!-- Background Section -->
-    <div class="mt-6 bg-white/30 backdrop-blur-lg border border-white border-opacity-30 shadow-sm rounded-lg p-6 w-full max-w-2xl">
-      <h2 class="text-lg font-bold font-serif mb-4">経歴・経験</h2>
-      <div class="text-sm text-gray-600 space-y-3">
+    <div class="mt-8 md:mt-10 bg-white/30 backdrop-blur-lg border border-white/40 shadow-sm rounded-xl p-6 md:p-8 w-full max-w-2xl">
+      <h2 class="text-lg font-bold font-serif mb-4 md:mb-5 text-gray-700">経歴・経験</h2>
+      <div class="text-sm text-gray-600 space-y-4">
         <p>10年以上のWEB開発経験を持ち、<span class="font-bold">WEBサイト制作からアプリ開発まで</span>、<br>数ヶ月の短期案件から年単位の長期プロジェクトまで<br>幅広い開発経験があります。</p>
         <p><span class="font-bold">Webアプリケーション、業務システム、<br>デジタルコンテンツ、アバター活用、<br>AR/VR</span>など、多様な分野のプロダクト開発に携わってきました。</p>
         <p><span class="font-bold">メインプロジェクトマネージャー</span>として要件定義から納品までを担当し、<br>外注管理やチームマネジメントの経験も豊富です。</p>
@@ -79,88 +83,8 @@
       </div>
     </div>
 
-    <!-- Services Section -->
-    <div class="mt-6 bg-white/30 backdrop-blur-lg border border-white border-opacity-30 shadow-sm rounded-lg p-6 w-full max-w-2xl">
-      <h2 class="text-lg font-bold font-serif mb-4">支援内容</h2>
-      <ul class="list-none pl-0 space-y-4">
-        <li class="flex items-start group">
-          <span class="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-          <div class="flex-1">
-            <div class="font-medium">プロダクト開発支援</div>
-            <div class="text-sm mt-1 text-gray-600">
-              ・要件定義・仕様設計支援<br>
-              ・開発計画・スケジュール管理<br>
-              ・品質管理・テスト計画支援
-            </div>
-          </div>
-        </li>
-        <li class="flex items-start group">
-          <span class="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-          <div class="flex-1">
-            <div class="font-medium">技術開発支援</div>
-            <div class="text-sm mt-1 text-gray-600">
-              ・フロントエンド開発支援<br>
-              ・UI/UX設計・実装支援<br>
-              ・API開発・システム設計支援
-            </div>
-          </div>
-        </li>
-        <li class="flex items-start group">
-          <span class="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-          <div class="flex-1">
-            <div class="font-medium">業務効率化支援</div>
-            <div class="text-sm mt-1 text-gray-600">
-              ・Google Apps Script開発<br>
-              ・業務自動化ツール開発<br>
-              ・データ分析・可視化支援
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <!-- 実績 Section -->
-    <div class="mt-6 bg-white/30 backdrop-blur-lg border border-white border-opacity-30 shadow-sm rounded-lg p-6 w-full max-w-2xl">
-      <h2 class="text-lg font-bold font-serif mb-4">主要プロジェクト</h2>
-      <ul class="list-none pl-0 space-y-4">
-        <li class="flex items-start group">
-          <span class="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-          <div class="flex-1">
-            <div class="font-medium">AI-KATA S2P</div>
-            <div class="text-sm mt-1">
-              <span class="text-gray-600">Laravel / Vue.js / Stripe</span>
-              <br>プロダクト戦略・UI/UX設計
-              <br>サブスクリプション課金システム構築
-            </div>
-          </div>
-        </li>
-        <li class="flex items-start">
-          <span class="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-          <div class="flex-1">
-            <div class="font-medium">NICE CAMERA</div>
-            <div class="text-sm mt-1">
-              <span class="text-gray-600">Vue.js / Laravel / Docker</span>
-              <br>プロダクトマネジメント・開発指揮
-              <br>CI/CD導入・チーム体制整備
-            </div>
-          </div>
-        </li>
-        <li class="flex items-start">
-          <span class="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-          <div class="flex-1">
-            <div class="font-medium">デジタル歴史体験プロジェクト</div>
-            <div class="text-sm mt-1">
-              <span class="text-gray-600">Vue.js / WebAR / AI音声</span>
-              <br>プロジェクト統括・UI/UX設計
-              <br>多言語対応システム構築
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-
     <!-- Footer Section -->
-    <footer class="mt-8 text-gray-600">
+    <footer class="mt-8 md:mt-10 text-gray-500 text-sm">
       <p>&copy; 2025 林原愛. All rights reserved.</p>
     </footer>
   </div>
