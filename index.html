@@ -3,48 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>林原愛 | Link in Bio</title>
+  <title>林原愛 | プロフィール</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Zen+Maru+Gothic:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    .animate-fade-in.visible {
-      animation: fadeIn 0.8s ease-out forwards;
-    }
-    .glass-effect {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.8);
-    }
-  </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      });
-
-      document.querySelectorAll('.animate-fade-in').forEach((el) => {
-        observer.observe(el);
-      });
-    });
-  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module" src="./assets/js/app.js"></script>
 </head>
-<body class="relative min-h-screen text-gray-800 font-['Raleway']">
+<body class="relative min-h-screen text-gray-800 font-['Raleway']" id="app">
   <div class="fixed inset-0 bg-gradient-to-r from-pink-500 to-yellow-500 opacity-30"></div>
   <div class="fixed inset-0 bg-white/10 backdrop-blur-md"></div>
   <div class="relative min-h-screen flex flex-col items-center justify-center py-20 px-4">
@@ -61,89 +30,86 @@
         <p class="font-['Zen_Maru_Gothic'] text-gray-600 font-medium -ml-2" style="letter-spacing: 0.5em;">（本名：和田愛）</p>
         
                 <div class="mt-6 space-y-1">
-          <p class="text-gray-700 font-medium tracking-wide">PdM / ディレクター</p>
-          <p class="text-gray-700 font-medium tracking-wide">WEBエンジニア / UIUXデザイナー</p>
+          <p class="text-gray-700 font-medium tracking-wide">プロダクト開発のジェネラリスト</p>
+          <p class="text-gray-600 text-sm">「誰かのために」を軸に、<br>ものづくりに携わっています</p>
         </div>
       </div>
     </div>
 
-    <!-- Motto Section -->
-    <div class="mt-8 md:mt-10 text-center max-w-2xl animate-fade-in" style="animation-delay: 0.1s">
+    <!-- About Me Section -->
+    <div class="mt-8 md:mt-10 text-center max-w-3xl animate-fade-in" style="animation-delay: 0.1s">
       <h2 class="text-xl font-bold mb-6 md:mb-8 text-center text-gray-700 relative tracking-wider">
-        <span class="relative z-10">Motto</span>
+        <span class="relative z-10">About Me</span>
         <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"></div>
       </h2>
       
-      <!-- キャッチコピー -->
-      <div class="mb-4">
-        <p class="text-2xl md:text-3xl font-bold font-['Zen_Old_Mincho'] text-gray-800 tracking-wide">志事を仕事に</p>
+      <!-- 簡潔なメッセージ -->
+      <div class="text-center">
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">
+          「誰かのために」を大切に、<br>ものづくりをしています
+        </p>
+        <p class="text-sm text-gray-600">
+          プロダクト開発のジェネラリスト / テクニカルディレクション
+        </p>
       </div>
-      
-      <!-- リード文 -->
-      <p class="text-base md:text-lg text-gray-700 leading-relaxed">「誰かのために」という想いを胸に、<br>ビジネスとテクノロジーを掛け合わせて<br>新しい価値を創造し続けています。</p>
     </div>
 
     <!-- Links Section -->
     <div class="mt-12 md:mt-16 w-full max-w-3xl">
+
+      <!-- Contact Section -->
       <div class="animate-fade-in" style="animation-delay: 0.2s">
         <h2 class="text-xl font-bold mb-6 md:mb-8 text-center text-gray-700 relative tracking-wider">
-          <span class="relative z-10">Contact & Social</span>
+          <span class="relative z-10">Let's Connect</span>
           <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"></div>
         </h2>
-        <div class="flex flex-wrap justify-center gap-4 md:gap-5">
-          <a href="mailto:info@meggumi.com" class="group flex flex-col items-center justify-center w-[calc(33.333%-1rem)] glass-effect py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300">
+        <p class="text-sm text-gray-600 text-center mb-6">お気軽にフォローや連絡をどうぞ！</p>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+          <!-- 連絡手段 -->
+          <a href="mailto:info@meggumi.com" class="group flex flex-col items-center justify-center glass-effect py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300">
             <div class="relative">
               <div class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"></div>
               <i class="fa-solid fa-envelope text-2xl md:text-3xl mb-2 text-gray-700 relative group-hover:text-gray-800 transition-colors duration-300"></i>
             </div>
             <span class="text-sm font-medium text-gray-700 group-hover:text-gray-800 transition-colors duration-300">Email</span>
           </a>
-          <a href="https://m.me/megumi.hayashibara" class="group flex flex-col items-center justify-center w-[calc(33.333%-1rem)] glass-effect py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300">
+          <a href="https://m.me/megumi.hayashibara" class="group flex flex-col items-center justify-center glass-effect py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300">
             <div class="relative">
               <div class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"></div>
               <i class="fa-brands fa-facebook-messenger text-2xl md:text-3xl mb-2 text-gray-700 relative group-hover:text-gray-800 transition-colors duration-300"></i>
             </div>
             <span class="text-sm font-medium text-gray-700 group-hover:text-gray-800 transition-colors duration-300">Messenger</span>
           </a>
-          <a href="https://twitter.com/gumigumih" class="group flex flex-col items-center justify-center w-[calc(33.333%-1rem)] glass-effect py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300">
+          <a href="https://twitter.com/gumigumih" class="group flex flex-col items-center justify-center glass-effect py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300">
             <div class="relative">
               <div class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"></div>
               <i class="fa-brands fa-x-twitter text-2xl md:text-3xl mb-2 text-gray-700 relative group-hover:text-gray-800 transition-colors duration-300"></i>
             </div>
             <span class="text-sm font-medium text-gray-700 group-hover:text-gray-800 transition-colors duration-300">X</span>
           </a>
-        </div>
-      </div>
-
-      <!-- Tech & Blog Section -->
-      <div class="animate-fade-in" style="animation-delay: 0.6s">
-        <h2 class="text-xl font-bold mb-6 md:mb-8 mt-12 md:mt-16 text-center text-gray-700 relative tracking-wider">
-          <span class="relative z-10">Tech & Blog</span>
-          <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"></div>
-        </h2>
-        <div class="flex flex-wrap justify-center gap-4 md:gap-5">
-          <a href="https://github.com/gumigumih" class="group flex flex-col items-center justify-center w-[calc(50%-0.75rem)] md:w-[calc(25%-1rem)] glass-effect py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300">
+          <!-- SNSアカウント -->
+          <a href="https://github.com/gumigumih" class="group flex flex-col items-center justify-center glass-effect py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300">
             <div class="relative">
               <div class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"></div>
               <i class="fa-brands fa-github text-2xl md:text-3xl mb-2 text-gray-700 relative group-hover:text-gray-800 transition-colors duration-300"></i>
             </div>
             <span class="text-sm font-medium text-gray-700 group-hover:text-gray-800 transition-colors duration-300">GitHub</span>
           </a>
-          <a href="https://zenn.dev/gumigumih" class="group flex flex-col items-center justify-center w-[calc(50%-0.75rem)] md:w-[calc(25%-1rem)] glass-effect py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300">
+          <a href="https://zenn.dev/gumigumih" class="group flex flex-col items-center justify-center glass-effect py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300">
             <div class="relative">
               <div class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"></div>
               <img src="./assets/images/zenn-logo.svg" alt="Zenn" class="h-7 md:h-8 mb-2 relative group-hover:opacity-80 transition-opacity duration-300">
             </div>
             <span class="text-sm font-medium text-gray-700 group-hover:text-gray-800 transition-colors duration-300">Zenn</span>
           </a>
-          <a href="https://qiita.com/gumigumih" class="group flex flex-col items-center justify-center w-[calc(50%-0.75rem)] md:w-[calc(25%-1rem)] glass-effect py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300">
+          <a href="https://qiita.com/gumigumih" class="group flex flex-col items-center justify-center glass-effect py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300">
             <div class="relative">
               <div class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"></div>
               <img src="./assets/images/qiita-icon.png" alt="Qiita" class="h-7 md:h-8 mb-2 relative group-hover:opacity-80 transition-opacity duration-300">
             </div>
             <span class="text-sm font-medium text-gray-700 group-hover:text-gray-800 transition-colors duration-300">Qiita</span>
           </a>
-          <a href="https://note.com/gumigumih" class="group flex flex-col items-center justify-center w-[calc(50%-0.75rem)] md:w-[calc(25%-1rem)] glass-effect py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300">
+          <a href="https://note.com/gumigumih" class="group flex flex-col items-center justify-center glass-effect py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300">
             <div class="relative">
               <div class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"></div>
               <img src="./assets/images/note-icon.svg" alt="note" class="h-7 md:h-8 mb-2 relative group-hover:opacity-80 transition-opacity duration-300">
@@ -153,133 +119,65 @@
         </div>
       </div>
 
-      <!-- Work Section -->
-      <div class="animate-fade-in" style="animation-delay: 0.6s">
+      <!-- Latest from note Section -->
+      <div class="animate-fade-in" style="animation-delay: 0.5s">
         <h2 class="text-xl font-bold mb-6 md:mb-8 mt-12 md:mt-16 text-center text-gray-700 relative tracking-wider">
-          <span class="relative z-10">Work</span>
+          <span class="relative z-10">My Thoughts</span>
           <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"></div>
         </h2>
-        <div class="flex flex-wrap justify-center gap-4 md:gap-5">
-          <a href="https://meggumi.com" class="group flex flex-col items-center justify-center w-full glass-effect py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300">
-            <div class="relative">
-              <div class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"></div>
-              <i class="fa-solid fa-briefcase text-2xl md:text-3xl mb-2 text-gray-700 relative group-hover:text-gray-800 transition-colors duration-300"></i>
-            </div>
-            <span class="text-sm font-medium text-gray-700 group-hover:text-gray-800 transition-colors duration-300">お仕事のサイトはこちら</span>
-          </a>
-        </div>
+        <p class="text-sm text-gray-600 text-center mb-6">note記事一覧</p>
+        <note-articles></note-articles>
       </div>
 
-      <!-- Portfolio Section -->
-      <div class="animate-fade-in" style="animation-delay: 0.8s">
-        <h2 class="text-xl font-bold mb-6 md:mb-8 mt-12 md:mt-16 text-center text-gray-700 relative tracking-wider">
-          <span class="relative z-10">Portfolio</span>
-          <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"></div>
-        </h2>
-        <div class="flex flex-wrap justify-center gap-4 md:gap-5">
-          <a href="https://portfolio.meggumi.com/" target="_blank" class="group flex flex-col items-center justify-center w-full glass-effect py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300">
-            <div class="relative">
-              <div class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"></div>
-              <i class="fa-solid fa-folder-open text-2xl md:text-3xl mb-2 text-gray-700 relative group-hover:text-gray-800 transition-colors duration-300"></i>
-            </div>
-            <span class="text-sm font-medium text-gray-700 group-hover:text-gray-800 transition-colors duration-300 tracking-wide">未公開経歴も含めたポートフォリオはこちら</span>
-            <span class="text-xs text-gray-500 mt-1">※パスワードが必要です。お問い合わせください。</span>
-          </a>
-        </div>
-      </div>
+
 
       <!-- Background Section -->
       <div class="animate-fade-in" style="animation-delay: 0.4s">
         <h2 class="text-xl font-bold mb-6 md:mb-8 mt-12 md:mt-16 text-center text-gray-700 relative tracking-wider">
-          <span class="relative z-10">Experience</span>
+          <span class="relative z-10">My Journey</span>
           <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"></div>
         </h2>
-        <div class="glass-effect rounded-3xl p-8 md:p-10">
-          <div class="relative">
-            <!-- タイムラインの縦線 -->
-            <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-pink-500 to-yellow-500"></div>
-            
-            <!-- タイムラインアイテム -->
-            <div class="relative mb-8 last:mb-0">
-              <div class="flex items-center">
-                <div class="w-1/2 pr-8 text-right">
-                  <div class="text-sm text-gray-500 mb-1">2014年</div>
-                  <div class="font-medium text-gray-700">デジタルハリウッド大学</div>
-                  <div class="text-sm text-gray-600">Web制作、プログラミング、デザインを学ぶ</div>
-                </div>
-                <div class="w-4 h-4 rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 absolute left-1/2 transform -translate-x-1/2"></div>
-                <div class="w-1/2 pl-8"></div>
-              </div>
-            </div>
-
-            <div class="relative mb-8 last:mb-0">
-              <div class="flex items-center">
-                <div class="w-1/2 pr-8"></div>
-                <div class="w-4 h-4 rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 absolute left-1/2 transform -translate-x-1/2"></div>
-                <div class="w-1/2 pl-8">
-                  <div class="text-sm text-gray-500 mb-1">2014年</div>
-                  <div class="font-medium text-gray-700">Web制作会社</div>
-                  <div class="text-sm text-gray-600">
-                    <div>フロントエンド開発</div>
-                    <div class="text-gray-500">（在学中アルバイト）</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="relative mb-8 last:mb-0">
-              <div class="flex items-center">
-                <div class="w-1/2 pr-8 text-right">
-                  <div class="text-sm text-gray-500 mb-1">2015年</div>
-                  <div class="font-medium text-gray-700">事業会社</div>
-                  <div class="text-sm text-gray-600">
-                    <div>バックエンド / フロントエンド開発</div>
-                    <div class="text-gray-500">（在学中アルバイト）</div>
-                  </div>
-                </div>
-                <div class="w-4 h-4 rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 absolute left-1/2 transform -translate-x-1/2"></div>
-                <div class="w-1/2 pl-8"></div>
-              </div>
-            </div>
-
-            <div class="relative mb-8 last:mb-0">
-              <div class="flex items-center">
-                <div class="w-1/2 pr-8"></div>
-                <div class="w-4 h-4 rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 absolute left-1/2 transform -translate-x-1/2"></div>
-                <div class="w-1/2 pl-8">
-                  <div class="text-sm text-gray-500 mb-1">2018年</div>
-                  <div class="font-medium text-gray-700">株式会社キッズプレート</div>
-                  <div class="text-sm text-gray-600">
-                    <div>ディレクター・PM</div>
-                    <div class="mt-1">Web制作 / UIUXデザイン</div>
-                    <div>フロントエンド / バックエンド開発</div>
-                    <div>広報・法務対応</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="relative mb-8 last:mb-0">
-              <div class="flex items-center">
-                <div class="w-1/2 pr-8 text-right">
-                  <div class="text-sm text-gray-500 mb-1">2024年</div>
-                  <div class="font-medium text-gray-700">個人事業活動開始</div>
-                  <div class="text-sm text-gray-600">
-                    <div>テクニカルディレクション</div>
-                  </div>
-                </div>
-                <div class="w-4 h-4 rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 absolute left-1/2 transform -translate-x-1/2"></div>
-                <div class="w-1/2 pl-8"></div>
-              </div>
-            </div>
+        <div class="text-center space-y-3">
+          <div class="text-sm text-gray-600">
+            <span class="font-medium text-gray-700">2018-2024</span> 株式会社キッズプレート（ディレクター・エンジニア）
+          </div>
+          <div class="text-sm text-gray-600">
+            <span class="font-medium text-gray-700">2024-</span> 個人事業（テクニカルディレクション）
+          </div>
+          <div class="text-xs text-gray-500 mt-4">
+            Web・アプリ開発、VR/AR、VTuber番組技術スタッフなど幅広く経験
           </div>
         </div>
       </div>
+
+      <!-- Work Section -->
+      <div class="animate-fade-in" style="animation-delay: 0.9s">
+        <h2 class="text-xl font-bold mb-6 md:mb-8 mt-12 md:mt-16 text-center text-gray-700 relative tracking-wider">
+          <span class="relative z-10">Work with Me</span>
+          <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"></div>
+        </h2>
+        <p class="text-sm text-gray-600 text-center mb-6">お仕事のご相談</p>
+        <div class="flex flex-wrap justify-center gap-4 md:gap-5">
+          <a href="https://meggumi.com/#contact" class="group flex flex-col items-center justify-center w-full glass-effect py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300">
+            <div class="relative">
+              <div class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"></div>
+              <i class="fa-solid fa-heart text-2xl md:text-3xl mb-2 text-gray-700 relative group-hover:text-gray-800 transition-colors duration-300"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700 group-hover:text-gray-800 transition-colors duration-300">お問い合わせはこちら</span>
+          </a>
+        </div>
+      </div>
+
+
     </div>
 
     <!-- Footer Section -->
-    <footer class="mt-12 md:mt-16 text-gray-500 text-sm animate-fade-in" style="animation-delay: 0.6s">
-      <p>&copy; 2025 林原愛. All rights reserved.</p>
+    <footer class="mt-12 md:mt-16 text-center animate-fade-in" style="animation-delay: 0.6s">
+      <div class="mb-6 max-w-2xl mx-auto">
+        <p class="text-gray-700 mb-2">読んでくれてありがとう</p>
+        <p class="text-sm text-gray-600">お気軽にお声がけください！</p>
+      </div>
+      <p class="text-gray-500 text-xs">&copy; 2025 林原愛</p>
     </footer>
   </div>
 </body>

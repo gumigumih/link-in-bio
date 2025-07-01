@@ -1,0 +1,34 @@
+/* NoteArticles コンポーネント用スタイル */
+.note-articles {
+  /* 将来的にコンポーネント固有のスタイルがあればここに追加 */
+}
+
+/* Swiper カスタムページネーション */
+.swiper-pagination-bullet-custom {
+  width: 12px !important;
+  height: 12px !important;
+  background: rgba(236, 72, 153, 0.3) !important;
+  border-radius: 50% !important;
+  margin: 0 6px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.swiper-pagination-bullet-active-custom {
+  background: #ec4899 !important;
+  transform: scale(1.2) !important;
+}
+
+.swiper-pagination-bullet-custom:hover {
+  background: rgba(236, 72, 153, 0.6) !important;
+  transform: scale(1.1) !important;
+}
+
+/* 他のコンポーネント用スタイルも将来的にここに追加可能 */
+.tech-blog-section {
+  /* Tech & Blog セクション用スタイル */
+}
+
+.contact-section {
+  /* Contact セクション用スタイル */
+}
