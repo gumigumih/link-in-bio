@@ -177,8 +177,8 @@ export default {
                   <img v-if="article.eyecatch" 
                        :src="article.eyecatch" 
                        :alt="article.title" 
-                       class="w-full aspect-video rounded-lg object-cover">
-                  <div v-else class="w-full aspect-video rounded-lg bg-gradient-to-br from-pink-100 to-yellow-100 flex items-center justify-center">
+                       class="w-full aspect-note-thumbnail rounded-lg object-cover">
+                  <div v-else class="w-full aspect-note-thumbnail rounded-lg bg-gradient-to-br from-pink-100 to-yellow-100 flex items-center justify-center">
                     <img src="./assets/images/note-icon.svg" alt="note" class="h-8 w-8">
                   </div>
                 </div>

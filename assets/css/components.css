@@ -3,6 +3,11 @@
   /* 将来的にコンポーネント固有のスタイルがあればここに追加 */
 }
 
+/* Note記事サムネイル用カスタムアスペクト比 (1200x630) */
+.aspect-note-thumbnail {
+  aspect-ratio: 1200 / 630; /* 1.905:1 */
+}
+
 /* Swiper カスタムページネーション */
 .swiper-pagination-bullet-custom {
   width: 12px !important;
