@@ -81,7 +81,7 @@ export default {
           this.destroySwiper();
           
           console.log('Swiper初期化中...');
-          this.swiper = new Swiper('.note-articles-swiper', {
+          this.swiper = new Swiper('.swiper', {
             slidesPerView: 1,
             spaceBetween: 20,
             autoplay: this.articles.items.length > 3 ? {
@@ -164,21 +164,21 @@ export default {
       
       <!-- 記事表示 -->
       <div v-else class="relative">
-        <div class="swiper note-articles-swiper">
+                      <div class="swiper p-2 -m-2">
           <div class="swiper-wrapper">
             <div v-for="article in articles.items" 
                  :key="article.link" 
                  class="swiper-slide">
               <a :href="article.link" 
                  target="_blank" 
-                 class="block glass-effect rounded-2xl p-4 md:p-5 hover:scale-105 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                 class="block bg-white/70 backdrop-blur-md border border-white/80 rounded-2xl p-4 md:p-5 hover:scale-105 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
                 <!-- アイキャッチ画像 -->
                 <div class="mb-3 flex-shrink-0">
                   <img v-if="article.eyecatch" 
                        :src="article.eyecatch" 
                        :alt="article.title" 
-                       class="w-full aspect-note-thumbnail rounded-lg object-cover">
-                  <div v-else class="w-full aspect-note-thumbnail rounded-lg bg-gradient-to-br from-pink-100 to-yellow-100 flex items-center justify-center">
+                       class="w-full aspect-[1200/630] rounded-lg object-cover">
+                  <div v-else class="w-full aspect-[1200/630] rounded-lg bg-gradient-to-br from-pink-100 to-yellow-100 flex items-center justify-center">
                     <img src="./assets/images/note-icon.svg" alt="note" class="h-8 w-8">
                   </div>
                 </div>
@@ -186,14 +186,14 @@ export default {
                 <!-- コンテンツエリア -->
                 <div class="flex flex-col flex-1">
                   <!-- タイトル -->
-                  <h3 class="font-medium text-gray-800 mb-2 hover:text-pink-600 transition-colors duration-300 leading-tight text-sm">
+                  <h3 class="font-medium text-gray-800 mb-2 hover:text-pink-600 transition-colors duration-300 leading-normal text-lg">
                     {{ article.title }}
                   </h3>
                   
                   <!-- ハッシュタグ表示 -->
-                  <div v-if="article.hashtags && article.hashtags.length > 0" class="flex flex-wrap gap-1 mb-2">
+                  <div v-if="article.hashtags && article.hashtags.length > 0" class="flex flex-wrap gap-2 mb-2">
                     <span v-for="hashtag in article.hashtags" :key="hashtag"
-                          class="text-xs px-2 py-1 bg-pink-100 text-pink-700 rounded-full">
+                          class="text-xs text-gray-600">
                       {{ hashtag }}
                     </span>
                   </div>
@@ -208,13 +208,13 @@ export default {
         
         <!-- ナビゲーションとページネーション（同じ行） -->
         <div class="flex justify-between items-center mt-6">
-          <div class="note-swiper-button-prev cursor-pointer w-10 h-10 flex items-center justify-center rounded-full bg-white/70 hover:bg-white/90 hover:scale-110 shadow-md transition-all duration-300">
+                      <div class="note-swiper-button-prev cursor-pointer w-10 h-10 flex items-center justify-center rounded-full bg-white/70 hover:bg-white/90 hover:scale-110 shadow-md transition-all duration-300 m-1">
             <i class="fas fa-chevron-left text-pink-500"></i>
           </div>
           
           <div class="note-swiper-pagination flex justify-center flex-1 mx-4"></div>
           
-          <div class="note-swiper-button-next cursor-pointer w-10 h-10 flex items-center justify-center rounded-full bg-white/70 hover:bg-white/90 hover:scale-110 shadow-md transition-all duration-300">
+                      <div class="note-swiper-button-next cursor-pointer w-10 h-10 flex items-center justify-center rounded-full bg-white/70 hover:bg-white/90 hover:scale-110 shadow-md transition-all duration-300 m-1">
             <i class="fas fa-chevron-right text-pink-500"></i>
           </div>
         </div>

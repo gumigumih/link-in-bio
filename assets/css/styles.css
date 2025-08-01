@@ -22,25 +22,7 @@
   animation: fadeIn 0.8s ease-out forwards;
 }
 
-/* ガラス効果 */
-.glass-effect {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-}
-
 /* Swiperのhover拡大用スペース確保 */
-.note-articles-swiper {
+.swiper .swiper-slide {
   padding: 8px;
-  margin: -8px;
-}
-
-.note-articles-swiper .swiper-slide {
-  padding: 8px;
-}
-
-/* ナビゲーションボタンのhover拡大用スペース確保 */
-.note-swiper-button-prev,
-.note-swiper-button-next {
-  margin: 4px;
 }

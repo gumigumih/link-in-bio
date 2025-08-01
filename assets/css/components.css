@@ -1,12 +1,4 @@
 /* NoteArticles コンポーネント用スタイル */
-.note-articles {
-  /* 将来的にコンポーネント固有のスタイルがあればここに追加 */
-}
-
-/* Note記事サムネイル用カスタムアスペクト比 (1200x630) */
-.aspect-note-thumbnail {
-  aspect-ratio: 1200 / 630; /* 1.905:1 */
-}
 
 /* Swiper カスタムページネーション */
 .swiper-pagination-bullet-custom {
@@ -30,10 +22,3 @@
 }
 
 /* 他のコンポーネント用スタイルも将来的にここに追加可能 */
-.tech-blog-section {
-  /* Tech & Blog セクション用スタイル */
-}
-
-.contact-section {
-  /* Contact セクション用スタイル */
-}
