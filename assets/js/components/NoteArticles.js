@@ -84,7 +84,6 @@ export default {
           this.swiper = new Swiper('.note-articles-swiper', {
             slidesPerView: 1,
             spaceBetween: 20,
-            loop: this.articles.items.length > 3,
             autoplay: this.articles.items.length > 3 ? {
               delay: 3000,
               disableOnInteraction: false,
@@ -172,9 +171,9 @@ export default {
                  class="swiper-slide">
               <a :href="article.link" 
                  target="_blank" 
-                 class="block glass-effect rounded-2xl p-4 md:p-5 hover:scale-105 hover:shadow-lg transition-all duration-300 h-full">
+                 class="block glass-effect rounded-2xl p-4 md:p-5 hover:scale-105 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
                 <!-- アイキャッチ画像 -->
-                <div class="mb-3">
+                <div class="mb-3 flex-shrink-0">
                   <img v-if="article.eyecatch" 
                        :src="article.eyecatch" 
                        :alt="article.title" 
@@ -184,20 +183,23 @@ export default {
                   </div>
                 </div>
                 
-                <div>
+                <!-- コンテンツエリア -->
+                <div class="flex flex-col flex-1">
+                  <!-- タイトル -->
                   <h3 class="font-medium text-gray-800 mb-2 hover:text-pink-600 transition-colors duration-300 leading-tight text-sm">
-                    {{ truncateTitle(article.title, 40) }}
+                    {{ article.title }}
                   </h3>
                   
                   <!-- ハッシュタグ表示 -->
                   <div v-if="article.hashtags && article.hashtags.length > 0" class="flex flex-wrap gap-1 mb-2">
-                    <span v-for="hashtag in article.hashtags.slice(0, 2)" :key="hashtag"
+                    <span v-for="hashtag in article.hashtags" :key="hashtag"
                           class="text-xs px-2 py-1 bg-pink-100 text-pink-700 rounded-full">
                       {{ hashtag }}
                     </span>
                   </div>
                   
-                  <time class="text-xs text-gray-500">{{ formatDate(article.pubDate) }}</time>
+                  <!-- 日付（下部固定） -->
+                  <time class="text-xs text-gray-500 mt-auto">{{ formatDate(article.pubDate) }}</time>
                 </div>
               </a>
             </div>
@@ -206,13 +208,13 @@ export default {
         
         <!-- ナビゲーションとページネーション（同じ行） -->
         <div class="flex justify-between items-center mt-6">
-          <div class="note-swiper-button-prev cursor-pointer w-10 h-10 flex items-center justify-center rounded-full bg-white/70 hover:bg-white/90 shadow-md transition-all duration-300">
+          <div class="note-swiper-button-prev cursor-pointer w-10 h-10 flex items-center justify-center rounded-full bg-white/70 hover:bg-white/90 hover:scale-110 shadow-md transition-all duration-300">
             <i class="fas fa-chevron-left text-pink-500"></i>
           </div>
           
           <div class="note-swiper-pagination flex justify-center flex-1 mx-4"></div>
           
-          <div class="note-swiper-button-next cursor-pointer w-10 h-10 flex items-center justify-center rounded-full bg-white/70 hover:bg-white/90 shadow-md transition-all duration-300">
+          <div class="note-swiper-button-next cursor-pointer w-10 h-10 flex items-center justify-center rounded-full bg-white/70 hover:bg-white/90 hover:scale-110 shadow-md transition-all duration-300">
             <i class="fas fa-chevron-right text-pink-500"></i>
           </div>
         </div>
