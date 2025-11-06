@@ -1,3 +1,7 @@
+﻿---
+import '../styles/tailwind.css';
+import appScriptUrl from '../scripts/app.js?url';
+---
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -16,7 +20,6 @@
 
       gtag('config', 'G-VZB3MLS9Q1');
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -30,9 +33,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module" src="./assets/js/app.js"></script>
+    <script type="module" src={appScriptUrl}></script>
   </head>
   <body class="relative min-h-screen text-gray-800 font-['Raleway']" id="app">
     <div
@@ -51,7 +53,7 @@
             class="absolute -inset-1 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-30 group-hover:opacity-50 transition duration-300"
           ></div>
           <img
-            src="./assets/images/profile.jpg"
+            src="/assets/images/profile.jpg"
             alt="Profile Picture"
             class="relative w-36 h-36 md:w-44 md:h-44 rounded-full object-cover ring-4 ring-white/70 flex-shrink-0 transform transition duration-300 group-hover:scale-105"
           />
@@ -209,7 +211,7 @@
                   class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"
                 ></div>
                 <img
-                  src="./assets/images/zenn-logo.svg"
+                  src="/assets/images/zenn-logo.svg"
                   alt="Zenn"
                   class="h-7 md:h-8 mb-2 relative group-hover:opacity-80 transition-opacity duration-300"
                 />
@@ -228,7 +230,7 @@
                   class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"
                 ></div>
                 <img
-                  src="./assets/images/qiita-icon.png"
+                  src="/assets/images/qiita-icon.png"
                   alt="Qiita"
                   class="h-7 md:h-8 mb-2 relative group-hover:opacity-80 transition-opacity duration-300"
                 />
@@ -247,7 +249,7 @@
                   class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"
                 ></div>
                 <img
-                  src="./assets/images/note-icon.svg"
+                  src="/assets/images/note-icon.svg"
                   alt="note"
                   class="h-7 md:h-8 mb-2 relative group-hover:opacity-80 transition-opacity duration-300"
                 />
@@ -381,3 +383,8 @@
     </div>
   </body>
 </html>
+
+
+
+
+

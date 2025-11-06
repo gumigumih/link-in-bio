@@ -1,6 +1,6 @@
-/* NoteArticles コンポーネント用スタイル */
+﻿/* NoteArticles component styles */
 
-/* Swiper カスタムページネーション */
+/* Swiper pagination customisation */
 .swiper-pagination-bullet-custom {
   width: 12px !important;
   height: 12px !important;
@@ -20,5 +20,3 @@
   background: rgba(236, 72, 153, 0.6) !important;
   transform: scale(1.1) !important;
 }
-
-/* 他のコンポーネント用スタイルも将来的にここに追加可能 */

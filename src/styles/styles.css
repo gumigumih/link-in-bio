@@ -1,7 +1,4 @@
-/* コンポーネントCSSをインポート */
-@import url("./components.css");
-
-/* アニメーション */
+﻿/* Global animation utilities */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -22,7 +19,7 @@
   animation: fadeIn 0.8s ease-out forwards;
 }
 
-/* Swiperのhover拡大用スペース確保 */
+/* Extra space so Swiper slides can scale on hover */
 .swiper .swiper-slide {
   padding: 8px;
 }
