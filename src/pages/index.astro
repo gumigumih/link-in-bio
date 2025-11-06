@@ -1,6 +1,6 @@
 ﻿---
 import '../styles/tailwind.css';
-import appScriptUrl from '../scripts/app.js?url';
+import ArticleList from '../components/ArticleList.astro';
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -20,7 +20,6 @@ import appScriptUrl from '../scripts/app.js?url';
 
       gtag('config', 'G-VZB3MLS9Q1');
     </script>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       rel="stylesheet"
@@ -29,14 +28,8 @@ import appScriptUrl from '../scripts/app.js?url';
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Zen+Maru+Gothic:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module" src={appScriptUrl}></script>
   </head>
-  <body class="relative min-h-screen text-gray-800 font-['Raleway']" id="app">
+  <body class="relative min-h-screen text-gray-800 font-['Raleway']">
     <div
       class="fixed inset-0 bg-gradient-to-r from-pink-500 to-yellow-500 opacity-30"
     ></div>
@@ -91,8 +84,8 @@ import appScriptUrl from '../scripts/app.js?url';
 
       <!-- About Me Section -->
       <div
-        class="mt-8 md:mt-10 text-center max-w-3xl animate-fade-in"
-        style="animation-delay: 0.1s"
+        class="mt-8 md:mt-10 text-center max-w-3xl"
+       
       >
         <h2
           class="text-xl font-bold mb-6 md:mb-8 text-center text-gray-700 relative tracking-wider"
@@ -117,7 +110,7 @@ import appScriptUrl from '../scripts/app.js?url';
       <!-- Links Section -->
       <div class="mt-12 md:mt-16 w-full max-w-3xl">
         <!-- Contact Section -->
-        <div class="animate-fade-in" style="animation-delay: 0.2s">
+        <div>
           <h2
             class="text-xl font-bold mb-6 md:mb-8 text-center text-gray-700 relative tracking-wider"
           >
@@ -264,23 +257,23 @@ import appScriptUrl from '../scripts/app.js?url';
       </div>
 
       <!-- Latest from note Section -->
-        <div class="animate-fade-in w-full max-w-7xl mx-auto px-4" style="animation-delay: 0.5s">
-          <h2
-            class="text-xl font-bold mb-6 md:mb-8 mt-12 md:mt-16 text-center text-gray-700 relative tracking-wider"
-          >
-            <span class="relative z-10">My Thoughts</span>
-            <div
-              class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"
-            ></div>
-          </h2>
-          <p class="text-sm text-gray-600 text-center mb-6">note記事一覧</p>
-          <note-articles></note-articles>
-        </div>
+      <div class="w-full max-w-6xl mx-auto">
+        <h2
+          class="text-xl font-bold mb-6 md:mb-8 mt-12 md:mt-16 text-center text-gray-700 relative tracking-wider"
+        >
+          <span class="relative z-10">My Thoughts</span>
+          <div
+            class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"
+          ></div>
+        </h2>
+        <p class="text-sm text-gray-600 text-center mb-6">note記事一覧</p>
+        <ArticleList />
+      </div>
 
       <!-- Sections with normal width -->
       <div class="mt-0 w-full max-w-3xl">
         <!-- Background Section -->
-        <div class="animate-fade-in" style="animation-delay: 0.4s">
+        <div>
           <h2
             class="text-xl font-bold mb-6 md:mb-8 mt-12 md:mt-16 text-center text-gray-700 relative tracking-wider"
           >
@@ -337,7 +330,7 @@ import appScriptUrl from '../scripts/app.js?url';
         </div>
 
         <!-- Work Section -->
-        <div class="animate-fade-in" style="animation-delay: 0.9s">
+        <div>
           <h2
             class="text-xl font-bold mb-6 md:mb-8 mt-12 md:mt-16 text-center text-gray-700 relative tracking-wider"
           >
@@ -371,8 +364,8 @@ import appScriptUrl from '../scripts/app.js?url';
 
       <!-- Footer Section -->
       <footer
-        class="mt-12 md:mt-16 text-center animate-fade-in"
-        style="animation-delay: 0.6s"
+        class="mt-12 md:mt-16 text-center"
+       
       >
         <div class="mb-6 max-w-2xl mx-auto">
           <p class="text-gray-700 mb-2">読んでくれてありがとう</p>
