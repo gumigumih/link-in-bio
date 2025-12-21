@@ -67,7 +67,7 @@ export default {
   },
   
   template: `
-    <div class="space-y-4 mb-4">
+    <div class="space-y-4 mb-4 font-['Zen_Maru_Gothic']">
       <!-- ローディング状態 -->
       <div v-if="articles.loading" class="text-center text-gray-500">
         <i class="fa-solid fa-spinner fa-spin text-xl mb-2"></i>
