@@ -5,9 +5,8 @@ export default {
       articles: {
         loading: true,
         error: false,
-        items: []
-      },
-      swiper: null
+        latest: null
+      }
     }
   },
   methods: {
@@ -25,26 +24,19 @@ export default {
         
         const data = await response.json();
         
-        // data.contentsから全記事を表示用に変換
+        // data.contentsから記事を整形し、公開日の新しい順にソート
         const articles = data.data.contents.map(article => ({
           title: article.name,
           link: `https://note.com/gumigumih/n/${article.key}`,
           pubDate: article.publishAt,
           guid: article.key,
           eyecatch: article.eyecatch,
-          hashtags: article.hashtags.map(tag => tag.hashtag.name)
-        }));
+          hashtags: article.hashtags.map(tag => tag.hashtag.name),
+        })).sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
         
-        this.articles.items = articles;
+        this.articles.latest = articles[0] || null;
         
         console.log('noteの記事を取得しました:', articles.length, '件');
-        console.log('記事データ:', articles);
-        
-        // データ取得後にSwiperを初期化
-        this.$nextTick(() => {
-          this.initSwiper();
-        });
-        
       } catch (error) {
         console.error('noteの記事取得エラー:', error);
         this.articles.error = true;
@@ -65,63 +57,6 @@ export default {
         console.error('日付フォーマットエラー:', error);
         return dateString;
       }
-    },
-    
-    truncateTitle(title, maxLength = 50) {
-      return title.length > maxLength ? title.substring(0, maxLength) + '...' : title;
-    },
-
-    initSwiper() {
-      this.$nextTick(() => {
-        console.log('Swiper初期化開始:', this.articles.items.length, '件の記事');
-        console.log('Swiper利用可能:', typeof Swiper !== 'undefined');
-        
-        if (typeof Swiper !== 'undefined' && this.articles.items.length > 0) {
-          // 既存のSwiperがあれば削除
-          this.destroySwiper();
-          
-          console.log('Swiper初期化中...');
-          this.swiper = new Swiper('.swiper', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            autoplay: this.articles.items.length > 3 ? {
-              delay: 3000,
-              disableOnInteraction: false,
-            } : false,
-            navigation: {
-              nextEl: '.note-swiper-button-next',
-              prevEl: '.note-swiper-button-prev',
-            },
-            pagination: {
-              el: '.note-swiper-pagination',
-              clickable: true,
-              bulletClass: 'swiper-pagination-bullet-custom',
-              bulletActiveClass: 'swiper-pagination-bullet-active-custom',
-            },
-            breakpoints: {
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              768: {
-                slidesPerView: 3,
-                spaceBetween: 24,
-              },
-            },
-          });
-          
-          console.log('Swiper初期化完了:', this.swiper);
-        } else {
-          console.log('Swiper初期化スキップ - Swiper未定義またはアイテム0件');
-        }
-      });
-    },
-
-    destroySwiper() {
-      if (this.swiper) {
-        this.swiper.destroy(true, true);
-        this.swiper = null;
-      }
     }
   },
 
@@ -130,13 +65,9 @@ export default {
   mounted() {
     this.fetchArticles();
   },
-
-  beforeUnmount() {
-    this.destroySwiper();
-  },
   
   template: `
-    <div class="space-y-4 mb-8">
+    <div class="space-y-4 mb-4">
       <!-- ローディング状態 -->
       <div v-if="articles.loading" class="text-center text-gray-500">
         <i class="fa-solid fa-spinner fa-spin text-xl mb-2"></i>
@@ -154,7 +85,7 @@ export default {
       </div>
       
       <!-- 記事なし -->
-      <div v-else-if="articles.items.length === 0" class="text-center text-gray-500">
+      <div v-else-if="!articles.latest" class="text-center text-gray-500">
         <p>記事が見つかりませんでした</p>
         <a href="https://note.com/gumigumih" 
            class="text-pink-600 hover:text-pink-700 transition-colors duration-300 mt-2 inline-block">
@@ -164,58 +95,46 @@ export default {
       
       <!-- 記事表示 -->
       <div v-else class="relative">
-                      <div class="swiper p-2 -m-2">
-          <div class="swiper-wrapper">
-            <div v-for="article in articles.items" 
-                 :key="article.link" 
-                 class="swiper-slide">
-              <a :href="article.link" 
-                 target="_blank" 
-                 class="block bg-white/70 backdrop-blur-md border border-white/80 rounded-2xl p-4 md:p-5 hover:scale-105 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
-                <!-- アイキャッチ画像 -->
-                <div class="mb-3 flex-shrink-0">
-                  <img v-if="article.eyecatch" 
-                       :src="article.eyecatch" 
-                       :alt="article.title" 
-                       class="w-full aspect-[1200/630] rounded-lg object-cover">
-                  <div v-else class="w-full aspect-[1200/630] rounded-lg bg-gradient-to-br from-pink-100 to-yellow-100 flex items-center justify-center">
-                    <img src="./assets/images/note-icon.svg" alt="note" class="h-8 w-8">
-                  </div>
-                </div>
-                
-                <!-- コンテンツエリア -->
-                <div class="flex flex-col flex-1">
-                  <!-- タイトル -->
-                  <h3 class="font-medium text-gray-800 mb-2 hover:text-pink-600 transition-colors duration-300 leading-normal text-lg">
-                    {{ article.title }}
-                  </h3>
-                  
-                  <!-- ハッシュタグ表示 -->
-                  <div v-if="article.hashtags && article.hashtags.length > 0" class="flex flex-wrap gap-2 mb-2">
-                    <span v-for="hashtag in article.hashtags" :key="hashtag"
-                          class="text-xs text-gray-600">
-                      {{ hashtag }}
-                    </span>
-                  </div>
-                  
-                  <!-- 日付（下部固定） -->
-                  <time class="text-xs text-gray-500 mt-auto">{{ formatDate(article.pubDate) }}</time>
-                </div>
-              </a>
+        <div class="bg-white/80 backdrop-blur-md border border-white/80 rounded-2xl p-5 md:p-6 shadow-sm flex flex-col gap-4">
+          <!-- アイキャッチ画像 -->
+          <div class="flex-shrink-0">
+            <img v-if="articles.latest.eyecatch" 
+                 :src="articles.latest.eyecatch" 
+                 :alt="articles.latest.title" 
+                 class="w-full aspect-[1200/630] rounded-xl object-cover">
+            <div v-else class="w-full aspect-[1200/630] rounded-xl bg-gradient-to-br from-pink-100 to-yellow-100 flex items-center justify-center">
+              <img src="./assets/images/note-icon.svg" alt="note" class="h-10 w-10">
             </div>
           </div>
-        </div>
-        
-        <!-- ナビゲーションとページネーション（同じ行） -->
-        <div class="flex justify-between items-center mt-6">
-                      <div class="note-swiper-button-prev cursor-pointer w-10 h-10 flex items-center justify-center rounded-full bg-white/70 hover:bg-white/90 hover:scale-110 shadow-md transition-all duration-300 m-1">
-            <i class="fas fa-chevron-left text-pink-500"></i>
+          
+          <!-- コンテンツエリア -->
+          <div class="flex flex-col gap-2">
+            <h3 class="font-semibold text-gray-800 text-lg leading-snug">
+              {{ articles.latest.title }}
+            </h3>
+            
+            <!-- ハッシュタグ表示 -->
+            <div v-if="articles.latest.hashtags && articles.latest.hashtags.length > 0" class="flex flex-wrap gap-2">
+              <span v-for="hashtag in articles.latest.hashtags" :key="hashtag"
+                    class="text-xs text-gray-600 bg-gray-100/80 px-2 py-1 rounded-full">
+                {{ hashtag }}
+              </span>
+            </div>
+            
+            <time class="text-xs text-gray-500">{{ formatDate(articles.latest.pubDate) }}</time>
           </div>
-          
-          <div class="note-swiper-pagination flex justify-center flex-1 mx-4"></div>
-          
-                      <div class="note-swiper-button-next cursor-pointer w-10 h-10 flex items-center justify-center rounded-full bg-white/70 hover:bg-white/90 hover:scale-110 shadow-md transition-all duration-300 m-1">
-            <i class="fas fa-chevron-right text-pink-500"></i>
+
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a :href="articles.latest.link" target="_blank"
+               class="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-pink-500 to-yellow-500 text-white font-semibold py-3 px-4 rounded-xl hover:opacity-95 hover:scale-[1.01] transition-all duration-300">
+              <i class="fa-solid fa-book-open"></i>
+              <span>記事を読む</span>
+            </a>
+            <a href="https://note.com/gumigumih" target="_blank"
+               class="inline-flex items-center justify-center gap-2 bg-white text-gray-800 font-semibold py-3 px-4 rounded-xl border border-gray-200 hover:border-pink-300 hover:text-pink-600 transition-all duration-300">
+              <span>もっと見る</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+            </a>
           </div>
         </div>
       </div>

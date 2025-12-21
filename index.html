@@ -26,12 +26,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Zen+Maru+Gothic:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./assets/js/app.js"></script>
   </head>
   <body class="relative min-h-screen text-gray-800 font-['Raleway']" id="app">
@@ -92,278 +87,143 @@
         class="mt-8 md:mt-10 text-center max-w-3xl animate-fade-in"
         style="animation-delay: 0.1s"
       >
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">
+          「誰かのために」を軸にプロダクトをつくっています。
+        </p>
+        <p class="text-sm text-gray-600">
+          まずは気になるリンクからどうぞ。
+        </p>
+      </div>
+
+      <!-- Links Section -->
+      <div class="mt-10 md:mt-12 w-full max-w-xl animate-fade-in" style="animation-delay: 0.2s">
         <h2
           class="text-xl font-bold mb-6 md:mb-8 text-center text-gray-700 relative tracking-wider"
         >
-          <span class="relative z-10">About Me</span>
+          <span class="relative z-10">Links</span>
           <div
             class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"
           ></div>
         </h2>
-
-        <!-- 簡潔なメッセージ -->
-        <div class="text-center">
-          <p class="text-lg text-gray-700 leading-relaxed mb-3">
-            「誰かのために」を大切に、<br />ものづくりをしています
-          </p>
-          <p class="text-sm text-gray-600">
-            プロダクト開発のジェネラリスト / テクニカルディレクション
-          </p>
-        </div>
-      </div>
-
-      <!-- Links Section -->
-      <div class="mt-12 md:mt-16 w-full max-w-3xl">
-        <!-- Contact Section -->
-        <div class="animate-fade-in" style="animation-delay: 0.2s">
-          <h2
-            class="text-xl font-bold mb-6 md:mb-8 text-center text-gray-700 relative tracking-wider"
+        <div class="space-y-4">
+          <a
+            href="https://note.com/gumigumih"
+            class="group flex items-center justify-between bg-white/80 backdrop-blur-md border border-white/80 px-5 py-4 rounded-2xl shadow-sm hover:scale-[1.02] hover:shadow-lg transition-all duration-300"
           >
-            <span class="relative z-10">Let's Connect</span>
-            <div
-              class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"
-            ></div>
-          </h2>
-          <p class="text-sm text-gray-600 text-center mb-6">
-            お気軽にフォローや連絡をどうぞ！
-          </p>
-          <div
-            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5"
+            <div class="flex items-center gap-3">
+              <img src="./assets/images/note-icon.svg" alt="note" class="h-8 w-8" />
+              <div class="text-left">
+                <p class="text-sm text-gray-600">最新記事はこちら</p>
+                <p class="text-base font-semibold text-gray-800">note</p>
+              </div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square text-gray-500 group-hover:text-gray-700 transition-colors duration-300"></i>
+          </a>
+          <a
+            href="https://twitter.com/gumigumih"
+            class="group flex items-center justify-between bg-white/80 backdrop-blur-md border border-white/80 px-5 py-4 rounded-2xl shadow-sm hover:scale-[1.02] hover:shadow-lg transition-all duration-300"
           >
-            <!-- 連絡手段 -->
-            <a
-              href="mailto:info@meggumi.com"
-              class="group flex flex-col items-center justify-center bg-white/70 backdrop-blur-md border border-white/80 py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300"
-            >
-              <div class="relative">
-                <div
-                  class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"
-                ></div>
-                <i
-                  class="fa-solid fa-envelope text-2xl md:text-3xl mb-2 text-gray-700 relative group-hover:text-gray-800 transition-colors duration-300"
-                ></i>
+            <div class="flex items-center gap-3">
+              <i class="fa-brands fa-x-twitter text-2xl text-gray-800"></i>
+              <div class="text-left">
+                <p class="text-sm text-gray-600">日々のつぶやき</p>
+                <p class="text-base font-semibold text-gray-800">X (Twitter)</p>
               </div>
-              <span
-                class="text-sm font-medium text-gray-700 group-hover:text-gray-800 transition-colors duration-300"
-                >Email</span
-              >
-            </a>
-            <a
-              href="https://m.me/megumi.hayashibara"
-              class="group flex flex-col items-center justify-center bg-white/70 backdrop-blur-md border border-white/80 py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300"
-            >
-              <div class="relative">
-                <div
-                  class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"
-                ></div>
-                <i
-                  class="fa-brands fa-facebook-messenger text-2xl md:text-3xl mb-2 text-gray-700 relative group-hover:text-gray-800 transition-colors duration-300"
-                ></i>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square text-gray-500 group-hover:text-gray-700 transition-colors duration-300"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/gumigumih"
+            class="group flex items-center justify-between bg-white/80 backdrop-blur-md border border-white/80 px-5 py-4 rounded-2xl shadow-sm hover:scale-[1.02] hover:shadow-lg transition-all duration-300"
+          >
+            <div class="flex items-center gap-3">
+              <i class="fa-brands fa-instagram text-2xl text-gray-800"></i>
+              <div class="text-left">
+                <p class="text-sm text-gray-600">日常の写真と記録</p>
+                <p class="text-base font-semibold text-gray-800">Instagram</p>
               </div>
-              <span
-                class="text-sm font-medium text-gray-700 group-hover:text-gray-800 transition-colors duration-300"
-                >Messenger</span
-              >
-            </a>
-            <a
-              href="https://twitter.com/gumigumih"
-              class="group flex flex-col items-center justify-center bg-white/70 backdrop-blur-md border border-white/80 py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300"
-            >
-              <div class="relative">
-                <div
-                  class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"
-                ></div>
-                <i
-                  class="fa-brands fa-x-twitter text-2xl md:text-3xl mb-2 text-gray-700 relative group-hover:text-gray-800 transition-colors duration-300"
-                ></i>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square text-gray-500 group-hover:text-gray-700 transition-colors duration-300"></i>
+          </a>
+          <a
+            href="https://github.com/gumigumih"
+            class="group flex items-center justify-between bg-white/80 backdrop-blur-md border border-white/80 px-5 py-4 rounded-2xl shadow-sm hover:scale-[1.02] hover:shadow-lg transition-all duration-300"
+          >
+            <div class="flex items-center gap-3">
+              <i class="fa-brands fa-github text-2xl text-gray-800"></i>
+              <div class="text-left">
+                <p class="text-sm text-gray-600">つくったもの</p>
+                <p class="text-base font-semibold text-gray-800">GitHub</p>
               </div>
-              <span
-                class="text-sm font-medium text-gray-700 group-hover:text-gray-800 transition-colors duration-300"
-                >X</span
-              >
-            </a>
-            <!-- SNSアカウント -->
-            <a
-              href="https://github.com/gumigumih"
-              class="group flex flex-col items-center justify-center bg-white/70 backdrop-blur-md border border-white/80 py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300"
-            >
-              <div class="relative">
-                <div
-                  class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"
-                ></div>
-                <i
-                  class="fa-brands fa-github text-2xl md:text-3xl mb-2 text-gray-700 relative group-hover:text-gray-800 transition-colors duration-300"
-                ></i>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square text-gray-500 group-hover:text-gray-700 transition-colors duration-300"></i>
+          </a>
+          <a
+            href="https://zenn.dev/gumigumih"
+            class="group flex items-center justify-between bg-white/80 backdrop-blur-md border border-white/80 px-5 py-4 rounded-2xl shadow-sm hover:scale-[1.02] hover:shadow-lg transition-all duration-300"
+          >
+            <div class="flex items-center gap-3">
+              <img src="./assets/images/zenn-logo.svg" alt="Zenn" class="h-7 w-7" />
+              <div class="text-left">
+                <p class="text-sm text-gray-600">技術系の記事</p>
+                <p class="text-base font-semibold text-gray-800">Zenn</p>
               </div>
-              <span
-                class="text-sm font-medium text-gray-700 group-hover:text-gray-800 transition-colors duration-300"
-                >GitHub</span
-              >
-            </a>
-            <a
-              href="https://zenn.dev/gumigumih"
-              class="group flex flex-col items-center justify-center bg-white/70 backdrop-blur-md border border-white/80 py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300"
-            >
-              <div class="relative">
-                <div
-                  class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"
-                ></div>
-                <img
-                  src="./assets/images/zenn-logo.svg"
-                  alt="Zenn"
-                  class="h-7 md:h-8 mb-2 relative group-hover:opacity-80 transition-opacity duration-300"
-                />
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square text-gray-500 group-hover:text-gray-700 transition-colors duration-300"></i>
+          </a>
+          <a
+            href="https://qiita.com/gumigumih"
+            class="group flex items-center justify-between bg-white/80 backdrop-blur-md border border-white/80 px-5 py-4 rounded-2xl shadow-sm hover:scale-[1.02] hover:shadow-lg transition-all duration-300"
+          >
+            <div class="flex items-center gap-3">
+              <img src="./assets/images/qiita-icon.png" alt="Qiita" class="h-7 w-7 rounded" />
+              <div class="text-left">
+                <p class="text-sm text-gray-600">実装メモと小ネタ</p>
+                <p class="text-base font-semibold text-gray-800">Qiita</p>
               </div>
-              <span
-                class="text-sm font-medium text-gray-700 group-hover:text-gray-800 transition-colors duration-300"
-                >Zenn</span
-              >
-            </a>
-            <a
-              href="https://qiita.com/gumigumih"
-              class="group flex flex-col items-center justify-center bg-white/70 backdrop-blur-md border border-white/80 py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300"
-            >
-              <div class="relative">
-                <div
-                  class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"
-                ></div>
-                <img
-                  src="./assets/images/qiita-icon.png"
-                  alt="Qiita"
-                  class="h-7 md:h-8 mb-2 relative group-hover:opacity-80 transition-opacity duration-300"
-                />
-              </div>
-              <span
-                class="text-sm font-medium text-gray-700 group-hover:text-gray-800 transition-colors duration-300"
-                >Qiita</span
-              >
-            </a>
-            <a
-              href="https://note.com/gumigumih"
-              class="group flex flex-col items-center justify-center bg-white/70 backdrop-blur-md border border-white/80 py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300"
-            >
-              <div class="relative">
-                <div
-                  class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"
-                ></div>
-                <img
-                  src="./assets/images/note-icon.svg"
-                  alt="note"
-                  class="h-7 md:h-8 mb-2 relative group-hover:opacity-80 transition-opacity duration-300"
-                />
-              </div>
-              <span
-                class="text-sm font-medium text-gray-700 group-hover:text-gray-800 transition-colors duration-300"
-                >note</span
-              >
-            </a>
-          </div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square text-gray-500 group-hover:text-gray-700 transition-colors duration-300"></i>
+          </a>
         </div>
       </div>
 
       <!-- Latest from note Section -->
-        <div class="animate-fade-in w-full max-w-7xl mx-auto px-4" style="animation-delay: 0.5s">
-          <h2
-            class="text-xl font-bold mb-6 md:mb-8 mt-12 md:mt-16 text-center text-gray-700 relative tracking-wider"
-          >
-            <span class="relative z-10">My Thoughts</span>
-            <div
-              class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"
-            ></div>
-          </h2>
-          <p class="text-sm text-gray-600 text-center mb-6">note記事一覧</p>
-          <note-articles></note-articles>
-        </div>
+      <div class="animate-fade-in w-full max-w-xl mt-10 md:mt-12" style="animation-delay: 0.4s">
+        <h2
+          class="text-xl font-bold mb-6 md:mb-8 text-center text-gray-700 relative tracking-wider"
+        >
+          <span class="relative z-10">Latest on note</span>
+          <div
+            class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"
+          ></div>
+        </h2>
+        <note-articles></note-articles>
+      </div>
 
-      <!-- Sections with normal width -->
-      <div class="mt-0 w-full max-w-3xl">
-        <!-- Background Section -->
-        <div class="animate-fade-in" style="animation-delay: 0.4s">
-          <h2
-            class="text-xl font-bold mb-6 md:mb-8 mt-12 md:mt-16 text-center text-gray-700 relative tracking-wider"
+      <!-- Contact Section -->
+      <div class="animate-fade-in w-full max-w-xl mt-10 md:mt-12" style="animation-delay: 0.5s">
+        <h2
+          class="text-xl font-bold mb-6 md:mb-8 text-center text-gray-700 relative tracking-wider"
+        >
+          <span class="relative z-10">Contact</span>
+          <div
+            class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"
+          ></div>
+        </h2>
+        <div class="space-y-4">
+          <a
+            href="https://meggumi.com/#contact"
+            class="group flex items-center justify-between bg-gradient-to-r from-pink-500 to-yellow-500 text-white px-5 py-4 rounded-2xl shadow-sm hover:scale-[1.02] hover:shadow-lg transition-all duration-300"
           >
-            <span class="relative z-10">My Journey</span>
-            <div
-              class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"
-            ></div>
-          </h2>
-          <div class="bg-white/70 backdrop-blur-md border border-white/80 rounded-2xl p-6 md:p-8 shadow-sm">
-            <!-- 左右分割レイアウト -->
-            <div class="space-y-6">
-              <!-- 2024- 現在 -->
-              <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
-                <!-- 左：年度 -->
-                <div class="flex-shrink-0 md:w-24">
-                  <div class="inline-block bg-gradient-to-r from-pink-500 to-pink-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full">
-                    2024 -
-                  </div>
-                </div>
-                <!-- 右：詳細 -->
-                <div class="flex-1">
-                  <div class="font-medium text-gray-800 text-sm mb-1">個人事業（テクニカルディレクション）</div>
-                  <div class="text-xs text-gray-600">フリーランスとして活動開始</div>
-                </div>
-              </div>
-              
-              <!-- 区切り線 -->
-              <div class="border-t border-gray-200/50"></div>
-              
-              <!-- 2018-2024 -->
-              <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
-                <!-- 左：年度 -->
-                <div class="flex-shrink-0 md:w-24">
-                  <div class="inline-block bg-gradient-to-r from-yellow-500 to-yellow-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full">
-                    2018-2024
-                  </div>
-                </div>
-                <!-- 右：詳細 -->
-                <div class="flex-1">
-                  <div class="font-medium text-gray-800 text-sm mb-1">株式会社キッズプレート</div>
-                  <div class="text-xs text-gray-600">ディレクター・エンジニア</div>
-                  <div class="text-xs text-gray-500 mt-1">Web・AR/VR・AIアプリ開発を担当</div>
-                </div>
-              </div>
-              
-              <!-- 経験サマリー -->
-              <div class="mt-6 pt-4 border-t border-gray-200/50">
-                <div class="text-xs text-gray-500 text-center">
-                  Web・アプリ開発、VR/AR、VTuber番組技術スタッフなど幅広く経験
-                </div>
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-envelope text-2xl"></i>
+              <div class="text-left">
+                <p class="text-sm opacity-90">相談・連絡はこちら</p>
+                <p class="text-base font-semibold">Contact Form</p>
               </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Work Section -->
-        <div class="animate-fade-in" style="animation-delay: 0.9s">
-          <h2
-            class="text-xl font-bold mb-6 md:mb-8 mt-12 md:mt-16 text-center text-gray-700 relative tracking-wider"
-          >
-            <span class="relative z-10">Work with Me</span>
-            <div
-              class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"
-            ></div>
-          </h2>
-          <p class="text-sm text-gray-600 text-center mb-6">お仕事のご相談</p>
-          <div class="flex flex-wrap justify-center gap-4 md:gap-5">
-            <a
-              href="https://meggumi.com/#contact"
-              class="group flex flex-col items-center justify-center w-full bg-white/70 backdrop-blur-md border border-white/80 py-5 md:py-6 rounded-2xl shadow-sm hover:scale-105 hover:shadow-lg transition-all duration-300"
-            >
-              <div class="relative">
-                <div
-                  class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-30 transition duration-300"
-                ></div>
-                <i
-                  class="fa-solid fa-heart text-2xl md:text-3xl mb-2 text-gray-700 relative group-hover:text-gray-800 transition-colors duration-300"
-                ></i>
-              </div>
-              <span
-                class="text-sm font-medium text-gray-700 group-hover:text-gray-800 transition-colors duration-300"
-                >お問い合わせはこちら</span
-              >
-            </a>
-          </div>
+            <i class="fa-solid fa-arrow-right text-xl"></i>
+          </a>
         </div>
       </div>
 

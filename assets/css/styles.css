@@ -21,8 +21,3 @@
 .animate-fade-in.visible {
   animation: fadeIn 0.8s ease-out forwards;
 }
-
-/* Swiperのhover拡大用スペース確保 */
-.swiper .swiper-slide {
-  padding: 8px;
-}
