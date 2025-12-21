@@ -1,5 +1,6 @@
 ﻿---
 import '../styles/tailwind.css';
+import LatestNote from '../components/LatestNote.astro';
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -20,7 +21,6 @@ import '../styles/tailwind.css';
       gtag('config', 'G-VZB3MLS9Q1');
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       rel="stylesheet"
@@ -197,7 +197,7 @@ import '../styles/tailwind.css';
             class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"
           ></div>
         </h2>
-        <note-articles></note-articles>
+        <LatestNote />
       </div>
 
       <!-- Contact Section -->

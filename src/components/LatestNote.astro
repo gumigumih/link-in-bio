@@ -1,0 +1,94 @@
+---
+import fs from 'fs/promises';
+import path from 'path';
+
+const filePath = path.join(import.meta.dirname, '..', '..', 'public', 'articles.json');
+let latest = null;
+
+try {
+  const json = JSON.parse(await fs.readFile(filePath, 'utf-8'));
+  const contents = json?.data?.contents || [];
+  latest = contents[0] || null; // update script already sorts by publishAt desc
+} catch (error) {
+  console.error('Failed to load articles.json', error);
+}
+
+const formatDate = (dateString) => {
+  try {
+    return new Date(dateString).toLocaleDateString('ja-JP', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    });
+  } catch (error) {
+    return dateString;
+  }
+};
+
+const imageSrc = latest?.localImagePath || latest?.eyecatch || '/assets/images/note-icon.svg';
+---
+<div class="space-y-4 mb-4 font-['Zen_Maru_Gothic']">
+  {latest === null && (
+    <div class="text-center text-gray-500">
+      <p>記事が見つかりませんでした</p>
+      <a
+        href="https://note.com/gumigumih"
+        class="text-pink-600 hover:text-pink-700 transition-colors duration-300 mt-2 inline-block"
+      >
+        noteで直接見る
+      </a>
+    </div>
+  )}
+
+  {latest !== null && (
+    <div class="relative">
+      <div class="bg-white/80 backdrop-blur-md border border-white/80 rounded-2xl p-5 md:p-6 shadow-sm flex flex-col gap-4">
+        <div class="flex-shrink-0">
+          {latest.eyecatch || latest.localImagePath ? (
+            <img
+              src={imageSrc}
+              alt={latest.title}
+              class="w-full aspect-[1200/630] rounded-xl object-cover"
+              loading="lazy"
+            />
+          ) : (
+            <div class="w-full aspect-[1200/630] rounded-xl bg-gradient-to-br from-pink-100 to-yellow-100 flex items-center justify-center">
+              <img src="/assets/images/note-icon.svg" alt="note" class="h-10 w-10" />
+            </div>
+          )}
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <h3 class="font-semibold text-gray-800 text-lg leading-snug">{latest.title}</h3>
+          {latest.hashtags && latest.hashtags.length > 0 && (
+            <div class="flex flex-wrap gap-2">
+              {latest.hashtags.map((tag) => (
+                <span class="text-xs text-gray-600 bg-gray-100/80 px-2 py-1 rounded-full">{tag.hashtag?.name || tag}</span>
+              ))}
+            </div>
+          )}
+          <time class="text-xs text-gray-500">{formatDate(latest.publishAt)}</time>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a
+            href={`https://note.com/gumigumih/n/${latest.key}`}
+            target="_blank"
+            class="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-pink-500 to-yellow-500 text-white font-semibold py-3 px-4 rounded-xl hover:opacity-95 hover:scale-[1.01] transition-all duration-300"
+          >
+            <i class="fa-solid fa-book-open"></i>
+            <span>記事を読む</span>
+          </a>
+          <a
+            href="https://note.com/gumigumih"
+            target="_blank"
+            class="inline-flex items-center justify-center gap-2 bg-white text-gray-800 font-semibold py-3 px-4 rounded-xl border border-gray-200 hover:border-pink-300 hover:text-pink-600 transition-all duration-300"
+          >
+            <span>もっと見る</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  )}
+</div>
