@@ -1,0 +1,43 @@
+/* コンポーネント用スタイルをここに追加 */
+
+/* Swiper pagination customisation */
+.swiper-pagination-bullet-custom {
+  width: 12px !important;
+  height: 12px !important;
+  background: rgba(236, 72, 153, 0.3) !important;
+  border-radius: 50% !important;
+  margin: 0 6px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.swiper-pagination-bullet-active-custom {
+  background: #ec4899 !important;
+  transform: scale(1.2) !important;
+}
+
+.swiper-pagination-bullet-custom:hover {
+  background: rgba(236, 72, 153, 0.6) !important;
+  transform: scale(1.1) !important;
+}
+
+/* Fade-in animation used in sections */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.animate-fade-in.visible {
+  animation: fadeIn 0.8s ease-out forwards;
+}

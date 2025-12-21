@@ -1,41 +1,21 @@
 import NoteArticles from './components/NoteArticles.js';
 
-const { createApp } = Vue;
+// Register Vue component and mount
+const app = Vue.createApp({});
+app.component('note-articles', NoteArticles);
+app.mount('#app');
 
-const app = createApp({
-  components: {
-    NoteArticles
+// Fade-in animation observer
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
   },
-  
-  data() {
-    return {
-      // 将来的に他のコンポーネント用のデータもここに追加
-    }
-  },
-  
-  methods: {
-    initializeAnimations() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      });
+  { threshold: 0.2 }
+);
 
-      document.querySelectorAll('.animate-fade-in').forEach((el) => {
-        observer.observe(el);
-      });
-    }
-  },
-  
-  mounted() {
-    // アニメーションを初期化
-    this.initializeAnimations();
-  }
-});
-
-app.mount('#app'); 
+document.querySelectorAll('.animate-fade-in').forEach(el => observer.observe(el));

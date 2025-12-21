@@ -1,127 +1,242 @@
-# æ—åŸæ„› | Link in Bio
+# —ÑŒ´ˆ¤ | Link in Bio
 
-ğŸŒ¸ æ—åŸæ„›ã®ãƒ‘ãƒ¼ã‚½ãƒŠãƒ«ãƒªãƒ³ã‚¯é›†ã‚µã‚¤ãƒˆ
+?? —ÑŒ´ˆ¤‚Ìƒp[ƒ\ƒiƒ‹ƒŠƒ“ƒNWƒTƒCƒg
 
-## ğŸš€ ç‰¹å¾´
+## ?? “Á’¥
 
-- **Vue.js** ã§ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆåŒ–ã•ã‚ŒãŸè»½é‡ã‚µã‚¤ãƒˆ
-- **noteã®æœ€æ–°è¨˜äº‹** ã‚’è‡ªå‹•è¡¨ç¤º
-- **ãƒ¬ã‚¹ãƒãƒ³ã‚·ãƒ–ãƒ‡ã‚¶ã‚¤ãƒ³** å¯¾å¿œ
-- **ã‚¬ãƒ©ã‚¹åŠ¹æœ** ã‚’ä½¿ã£ãŸç¾ã—ã„UI
-- **JSON cache** ã«ã‚ˆã‚‹ãƒ‘ãƒ•ã‚©ãƒ¼ãƒãƒ³ã‚¹æœ€é©åŒ–
+- **Vue.js** ‚ÅƒRƒ“ƒ|[ƒlƒ“ƒg‰»‚³‚ê‚½Œy—ÊƒTƒCƒg
+- **note‚ÌÅV‹L–** ‚ğ©“®•\¦
+- **ƒŒƒXƒ|ƒ“ƒVƒuƒfƒUƒCƒ“** ‘Î‰
+- **ƒKƒ‰ƒXŒø‰Ê** ‚ğg‚Á‚½”ü‚µ‚¢UI
+- **JSON cache** ‚É‚æ‚éƒpƒtƒH[ƒ}ƒ“ƒXÅ“K‰»
 
-## ğŸ“ ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆæ§‹é€ 
+## ?? ƒvƒƒWƒFƒNƒg\‘¢
 
 ```
 link_in_bio/
-â”œâ”€â”€ assets/
-â”‚   â”œâ”€â”€ css/
-â”‚   â”‚   â”œâ”€â”€ styles.css          # ãƒ¡ã‚¤ãƒ³ã‚¹ã‚¿ã‚¤ãƒ«
-â”‚   â”‚   â””â”€â”€ components.css      # ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆç”¨ã‚¹ã‚¿ã‚¤ãƒ«
-â”‚   â”œâ”€â”€ js/
-â”‚   â”‚   â”œâ”€â”€ app.js              # ãƒ¡ã‚¤ãƒ³Vueã‚¢ãƒ—ãƒª
-â”‚   â”‚   â”œâ”€â”€ components/
-â”‚   â”‚   â”‚   â””â”€â”€ NoteArticles.js # noteè¨˜äº‹è¡¨ç¤ºã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
-â”‚   â”‚   â””â”€â”€ scripts/
-â”‚   â”‚       â””â”€â”€ fetch-note-rss.js # RSSå–å¾—ã‚¹ã‚¯ãƒªãƒ—ãƒˆ
-â”‚   â”œâ”€â”€ data/
-â”‚   â”‚   â””â”€â”€ note-articles.json  # noteã®è¨˜äº‹ãƒ‡ãƒ¼ã‚¿ï¼ˆã‚­ãƒ£ãƒƒã‚·ãƒ¥ï¼‰
-â”‚   â””â”€â”€ images/                 # ç”»åƒãƒ•ã‚¡ã‚¤ãƒ«
-â”œâ”€â”€ index.html                  # ãƒ¡ã‚¤ãƒ³ãƒšãƒ¼ã‚¸
-â”œâ”€â”€ update-note-articles.js     # RSSæ›´æ–°ç”¨Node.jsã‚¹ã‚¯ãƒªãƒ—ãƒˆ
-â””â”€â”€ package.json
+„¥„Ÿ„Ÿ public/
+„    „¥„Ÿ„Ÿ assets/
+„    „    „¤„Ÿ„Ÿ images/               # ŒöŠJ—p‰æ‘œƒAƒZƒbƒg
+„    „¤„Ÿ„Ÿ articles.json              # note‹L–ƒLƒƒƒbƒVƒ…
+„¥„Ÿ„Ÿ scripts/
+„    „¤„Ÿ„Ÿ update-articles.js        # ‹L–æ“¾ƒXƒNƒŠƒvƒg
+„¥„Ÿ„Ÿ src/
+„    „¥„Ÿ„Ÿ components/
+„    „    „¤„Ÿ„Ÿ ArticleList.astro     # note‹L–ˆê——ƒRƒ“ƒ|[ƒlƒ“ƒg
+„    „¥„Ÿ„Ÿ pages/
+„    „    „¤„Ÿ„Ÿ index.astro           # ƒƒCƒ“ƒy[ƒW
+„    „¥„Ÿ„Ÿ scripts/
+„    „    „¤„Ÿ„Ÿ articleList.js        # Swiper‰Šú‰»E•`‰æƒƒWƒbƒN
+„    „¤„Ÿ„Ÿ styles/
+„        „¥„Ÿ„Ÿ components.css        # ƒRƒ“ƒ|[ƒlƒ“ƒgŒü‚¯ƒXƒ^ƒCƒ‹
+„        „¤„Ÿ„Ÿ tailwind.css          # TailwindƒGƒ“ƒgƒŠ
+„¥„Ÿ„Ÿ astro.config.mjs
+„¥„Ÿ„Ÿ package.json
+„¤„Ÿ„Ÿ README.md
 ```
 
-## ğŸ› ï¸ ã‚»ãƒƒãƒˆã‚¢ãƒƒãƒ—
+## ??? ƒZƒbƒgƒAƒbƒv
 
-### 1. ä¾å­˜é–¢ä¿‚ã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
+### 1. ˆË‘¶ŠÖŒW‚ÌƒCƒ“ƒXƒg[ƒ‹
 
-```bash
-npm install
+```
+link_in_bio/
+„¥„Ÿ„Ÿ public/
+„    „¥„Ÿ„Ÿ assets/
+„    „    „¤„Ÿ„Ÿ images/               # ŒöŠJ—p‰æ‘œƒAƒZƒbƒg
+„    „¤„Ÿ„Ÿ articles.json              # note‹L–ƒLƒƒƒbƒVƒ…
+„¥„Ÿ„Ÿ scripts/
+„    „¤„Ÿ„Ÿ update-articles.js        # ‹L–æ“¾ƒXƒNƒŠƒvƒg
+„¥„Ÿ„Ÿ src/
+„    „¥„Ÿ„Ÿ components/
+„    „    „¤„Ÿ„Ÿ ArticleList.astro     # note‹L–ˆê——ƒRƒ“ƒ|[ƒlƒ“ƒg
+„    „¥„Ÿ„Ÿ pages/
+„    „    „¤„Ÿ„Ÿ index.astro           # ƒƒCƒ“ƒy[ƒW
+„    „¥„Ÿ„Ÿ scripts/
+„    „    „¤„Ÿ„Ÿ articleList.js        # Swiper‰Šú‰»E•`‰æƒƒWƒbƒN
+„    „¤„Ÿ„Ÿ styles/
+„        „¥„Ÿ„Ÿ components.css        # ƒRƒ“ƒ|[ƒlƒ“ƒgŒü‚¯ƒXƒ^ƒCƒ‹
+„        „¤„Ÿ„Ÿ tailwind.css          # TailwindƒGƒ“ƒgƒŠ
+„¥„Ÿ„Ÿ astro.config.mjs
+„¥„Ÿ„Ÿ package.json
+„¤„Ÿ„Ÿ README.md
 ```
 
-### 2. é–‹ç™ºã‚µãƒ¼ãƒãƒ¼ã®èµ·å‹•
+### 2. ŠJ”­ƒT[ƒo[‚Ì‹N“®
 
-```bash
-npm run dev
+```
+link_in_bio/
+„¥„Ÿ„Ÿ public/
+„    „¥„Ÿ„Ÿ assets/
+„    „    „¤„Ÿ„Ÿ images/               # ŒöŠJ—p‰æ‘œƒAƒZƒbƒg
+„    „¤„Ÿ„Ÿ articles.json              # note‹L–ƒLƒƒƒbƒVƒ…
+„¥„Ÿ„Ÿ scripts/
+„    „¤„Ÿ„Ÿ update-articles.js        # ‹L–æ“¾ƒXƒNƒŠƒvƒg
+„¥„Ÿ„Ÿ src/
+„    „¥„Ÿ„Ÿ components/
+„    „    „¤„Ÿ„Ÿ ArticleList.astro     # note‹L–ˆê——ƒRƒ“ƒ|[ƒlƒ“ƒg
+„    „¥„Ÿ„Ÿ pages/
+„    „    „¤„Ÿ„Ÿ index.astro           # ƒƒCƒ“ƒy[ƒW
+„    „¥„Ÿ„Ÿ scripts/
+„    „    „¤„Ÿ„Ÿ articleList.js        # Swiper‰Šú‰»E•`‰æƒƒWƒbƒN
+„    „¤„Ÿ„Ÿ styles/
+„        „¥„Ÿ„Ÿ components.css        # ƒRƒ“ƒ|[ƒlƒ“ƒgŒü‚¯ƒXƒ^ƒCƒ‹
+„        „¤„Ÿ„Ÿ tailwind.css          # TailwindƒGƒ“ƒgƒŠ
+„¥„Ÿ„Ÿ astro.config.mjs
+„¥„Ÿ„Ÿ package.json
+„¤„Ÿ„Ÿ README.md
 ```
 
-ãƒ–ãƒ©ã‚¦ã‚¶ã§ `http://localhost:8000` ã«ã‚¢ã‚¯ã‚»ã‚¹
+ƒuƒ‰ƒEƒU‚Å `http://localhost:8000` ‚ÉƒAƒNƒZƒX
 
-## ğŸ“ noteã®è¨˜äº‹æ›´æ–°
+## ?? note‚Ì‹L–XV
 
-### æ‰‹å‹•æ›´æ–°
+### è“®XV
 
-```bash
-npm run update-note
+```
+link_in_bio/
+„¥„Ÿ„Ÿ public/
+„    „¥„Ÿ„Ÿ assets/
+„    „    „¤„Ÿ„Ÿ images/               # ŒöŠJ—p‰æ‘œƒAƒZƒbƒg
+„    „¤„Ÿ„Ÿ articles.json              # note‹L–ƒLƒƒƒbƒVƒ…
+„¥„Ÿ„Ÿ scripts/
+„    „¤„Ÿ„Ÿ update-articles.js        # ‹L–æ“¾ƒXƒNƒŠƒvƒg
+„¥„Ÿ„Ÿ src/
+„    „¥„Ÿ„Ÿ components/
+„    „    „¤„Ÿ„Ÿ ArticleList.astro     # note‹L–ˆê——ƒRƒ“ƒ|[ƒlƒ“ƒg
+„    „¥„Ÿ„Ÿ pages/
+„    „    „¤„Ÿ„Ÿ index.astro           # ƒƒCƒ“ƒy[ƒW
+„    „¥„Ÿ„Ÿ scripts/
+„    „    „¤„Ÿ„Ÿ articleList.js        # Swiper‰Šú‰»E•`‰æƒƒWƒbƒN
+„    „¤„Ÿ„Ÿ styles/
+„        „¥„Ÿ„Ÿ components.css        # ƒRƒ“ƒ|[ƒlƒ“ƒgŒü‚¯ƒXƒ^ƒCƒ‹
+„        „¤„Ÿ„Ÿ tailwind.css          # TailwindƒGƒ“ƒgƒŠ
+„¥„Ÿ„Ÿ astro.config.mjs
+„¥„Ÿ„Ÿ package.json
+„¤„Ÿ„Ÿ README.md
 ```
 
-### è‡ªå‹•æ›´æ–°ã®è¨­å®š
+### ©“®XV‚Ìİ’è
 
-GitHub Actionsã‚„ cron job ã§å®šæœŸå®Ÿè¡Œã™ã‚‹å ´åˆï¼š
+GitHub Actions‚â cron job ‚Å’èŠúÀs‚·‚éê‡F
 
-```bash
-# æ¯æ—¥åˆå‰9æ™‚ã«å®Ÿè¡Œ
-0 9 * * * cd /path/to/link_in_bio && npm run update-note
+```
+link_in_bio/
+„¥„Ÿ„Ÿ public/
+„    „¥„Ÿ„Ÿ assets/
+„    „    „¤„Ÿ„Ÿ images/               # ŒöŠJ—p‰æ‘œƒAƒZƒbƒg
+„    „¤„Ÿ„Ÿ articles.json              # note‹L–ƒLƒƒƒbƒVƒ…
+„¥„Ÿ„Ÿ scripts/
+„    „¤„Ÿ„Ÿ update-articles.js        # ‹L–æ“¾ƒXƒNƒŠƒvƒg
+„¥„Ÿ„Ÿ src/
+„    „¥„Ÿ„Ÿ components/
+„    „    „¤„Ÿ„Ÿ ArticleList.astro     # note‹L–ˆê——ƒRƒ“ƒ|[ƒlƒ“ƒg
+„    „¥„Ÿ„Ÿ pages/
+„    „    „¤„Ÿ„Ÿ index.astro           # ƒƒCƒ“ƒy[ƒW
+„    „¥„Ÿ„Ÿ scripts/
+„    „    „¤„Ÿ„Ÿ articleList.js        # Swiper‰Šú‰»E•`‰æƒƒWƒbƒN
+„    „¤„Ÿ„Ÿ styles/
+„        „¥„Ÿ„Ÿ components.css        # ƒRƒ“ƒ|[ƒlƒ“ƒgŒü‚¯ƒXƒ^ƒCƒ‹
+„        „¤„Ÿ„Ÿ tailwind.css          # TailwindƒGƒ“ƒgƒŠ
+„¥„Ÿ„Ÿ astro.config.mjs
+„¥„Ÿ„Ÿ package.json
+„¤„Ÿ„Ÿ README.md
 ```
 
-## ğŸ¨ ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚º
+## ?? ƒJƒXƒ^ƒ}ƒCƒY
 
-### 1. ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«æƒ…å ±ã®å¤‰æ›´
+### 1. ƒvƒƒtƒB[ƒ‹î•ñ‚Ì•ÏX
 
-`index.html` ã®ä»¥ä¸‹ã®éƒ¨åˆ†ã‚’ç·¨é›†ï¼š
+`index.html` ‚ÌˆÈ‰º‚Ì•”•ª‚ğ•ÒWF
 
-```html
-<!-- ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«æƒ…å ± -->
-<h1>æ—åŸæ„›</h1>
-<p>ï¼ˆæœ¬åï¼šå’Œç”°æ„›ï¼‰</p>
+```
+link_in_bio/
+„¥„Ÿ„Ÿ public/
+„    „¥„Ÿ„Ÿ assets/
+„    „    „¤„Ÿ„Ÿ images/               # ŒöŠJ—p‰æ‘œƒAƒZƒbƒg
+„    „¤„Ÿ„Ÿ articles.json              # note‹L–ƒLƒƒƒbƒVƒ…
+„¥„Ÿ„Ÿ scripts/
+„    „¤„Ÿ„Ÿ update-articles.js        # ‹L–æ“¾ƒXƒNƒŠƒvƒg
+„¥„Ÿ„Ÿ src/
+„    „¥„Ÿ„Ÿ components/
+„    „    „¤„Ÿ„Ÿ ArticleList.astro     # note‹L–ˆê——ƒRƒ“ƒ|[ƒlƒ“ƒg
+„    „¥„Ÿ„Ÿ pages/
+„    „    „¤„Ÿ„Ÿ index.astro           # ƒƒCƒ“ƒy[ƒW
+„    „¥„Ÿ„Ÿ scripts/
+„    „    „¤„Ÿ„Ÿ articleList.js        # Swiper‰Šú‰»E•`‰æƒƒWƒbƒN
+„    „¤„Ÿ„Ÿ styles/
+„        „¥„Ÿ„Ÿ components.css        # ƒRƒ“ƒ|[ƒlƒ“ƒgŒü‚¯ƒXƒ^ƒCƒ‹
+„        „¤„Ÿ„Ÿ tailwind.css          # TailwindƒGƒ“ƒgƒŠ
+„¥„Ÿ„Ÿ astro.config.mjs
+„¥„Ÿ„Ÿ package.json
+„¤„Ÿ„Ÿ README.md
 ```
 
-### 2. ãƒªãƒ³ã‚¯ã®è¿½åŠ ãƒ»å¤‰æ›´
+### 2. ƒŠƒ“ƒN‚Ì’Ç‰ÁE•ÏX
 
-å„ã‚»ã‚¯ã‚·ãƒ§ãƒ³ã®ãƒªãƒ³ã‚¯ã‚’ `index.html` ã§ç·¨é›†å¯èƒ½
+ŠeƒZƒNƒVƒ‡ƒ“‚ÌƒŠƒ“ƒN‚ğ `index.html` ‚Å•ÒW‰Â”\
 
-### 3. ã‚¹ã‚¿ã‚¤ãƒ«ã®ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚º
+### 3. ƒXƒ^ƒCƒ‹‚ÌƒJƒXƒ^ƒ}ƒCƒY
 
-- `assets/css/styles.css` - å…¨ä½“ã‚¹ã‚¿ã‚¤ãƒ«
-- `assets/css/components.css` - ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆå›ºæœ‰ã‚¹ã‚¿ã‚¤ãƒ«
+- `src/styles/components.css` - Swiper‚È‚Ç‚ÌƒRƒ“ƒ|[ƒlƒ“ƒgŒü‚¯ƒXƒ^ƒCƒ‹
+- `src/styles/components.css` - ƒRƒ“ƒ|[ƒlƒ“ƒgŒÅ—LƒXƒ^ƒCƒ‹
 
-## ğŸ”§ é–‹ç™º
+## ?? ŠJ”­
 
-### æ–°ã—ã„ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã®è¿½åŠ 
+### V‚µ‚¢ƒRƒ“ƒ|[ƒlƒ“ƒg‚Ì’Ç‰Á
 
-1. `assets/js/components/` ã«æ–°ã—ã„ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆ
-2. `assets/js/app.js` ã§ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’ã‚¤ãƒ³ãƒãƒ¼ãƒˆãƒ»ç™»éŒ²
-3. `index.html` ã§ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’ä½¿ç”¨
+1. `src/scripts/components/` ‚ÉV‚µ‚¢ƒRƒ“ƒ|[ƒlƒ“ƒgƒtƒ@ƒCƒ‹‚ğì¬
+2. `src/scripts/app.js` ‚ÅƒRƒ“ƒ|[ƒlƒ“ƒg‚ğƒCƒ“ƒ|[ƒgE“o˜^
+3. `index.html` ‚ÅƒRƒ“ƒ|[ƒlƒ“ƒg‚ğg—p
 
-### ãƒ‡ãƒãƒƒã‚°
+### ƒfƒoƒbƒO
 
-ãƒ–ãƒ©ã‚¦ã‚¶ã®é–‹ç™ºè€…ãƒ„ãƒ¼ãƒ«ã®ã‚³ãƒ³ã‚½ãƒ¼ãƒ«ã§ï¼š
+ƒuƒ‰ƒEƒU‚ÌŠJ”­Òƒc[ƒ‹‚ÌƒRƒ“ƒ\[ƒ‹‚ÅF
 
-```javascript
-// RSSãƒ‡ãƒ¼ã‚¿ã‚’æ‰‹å‹•å–å¾—ï¼ˆãƒ†ã‚¹ãƒˆç”¨ï¼‰
-fetchAndSaveNoteRSS()
+```
+link_in_bio/
+„¥„Ÿ„Ÿ public/
+„    „¥„Ÿ„Ÿ assets/
+„    „    „¤„Ÿ„Ÿ images/               # ŒöŠJ—p‰æ‘œƒAƒZƒbƒg
+„    „¤„Ÿ„Ÿ articles.json              # note‹L–ƒLƒƒƒbƒVƒ…
+„¥„Ÿ„Ÿ scripts/
+„    „¤„Ÿ„Ÿ update-articles.js        # ‹L–æ“¾ƒXƒNƒŠƒvƒg
+„¥„Ÿ„Ÿ src/
+„    „¥„Ÿ„Ÿ components/
+„    „    „¤„Ÿ„Ÿ ArticleList.astro     # note‹L–ˆê——ƒRƒ“ƒ|[ƒlƒ“ƒg
+„    „¥„Ÿ„Ÿ pages/
+„    „    „¤„Ÿ„Ÿ index.astro           # ƒƒCƒ“ƒy[ƒW
+„    „¥„Ÿ„Ÿ scripts/
+„    „    „¤„Ÿ„Ÿ articleList.js        # Swiper‰Šú‰»E•`‰æƒƒWƒbƒN
+„    „¤„Ÿ„Ÿ styles/
+„        „¥„Ÿ„Ÿ components.css        # ƒRƒ“ƒ|[ƒlƒ“ƒgŒü‚¯ƒXƒ^ƒCƒ‹
+„        „¤„Ÿ„Ÿ tailwind.css          # TailwindƒGƒ“ƒgƒŠ
+„¥„Ÿ„Ÿ astro.config.mjs
+„¥„Ÿ„Ÿ package.json
+„¤„Ÿ„Ÿ README.md
 ```
 
-## ğŸš€ ãƒ‡ãƒ—ãƒ­ã‚¤
+## ?? ƒfƒvƒƒC
 
 ### GitHub Pages
 
-1. GitHubãƒªãƒã‚¸ãƒˆãƒªã«ãƒ—ãƒƒã‚·ãƒ¥
-2. Settings > Pages ã§è¨­å®š
-3. è‡ªå‹•çš„ã«ãƒ‡ãƒ—ãƒ­ã‚¤ã•ã‚Œã¾ã™
+1. GitHubƒŠƒ|ƒWƒgƒŠ‚ÉƒvƒbƒVƒ…
+2. Settings > Pages ‚Åİ’è
+3. ©“®“I‚ÉƒfƒvƒƒC‚³‚ê‚Ü‚·
 
-### ãã®ä»–ã®ãƒ›ã‚¹ãƒ†ã‚£ãƒ³ã‚°
+### ‚»‚Ì‘¼‚ÌƒzƒXƒeƒBƒ“ƒO
 
-é™çš„ãƒ•ã‚¡ã‚¤ãƒ«ãªã®ã§ã€ä»»æ„ã®Webã‚µãƒ¼ãƒãƒ¼ã«ã‚¢ãƒƒãƒ—ãƒ­ãƒ¼ãƒ‰å¯èƒ½
+Ã“Iƒtƒ@ƒCƒ‹‚È‚Ì‚ÅA”CˆÓ‚ÌWebƒT[ƒo[‚ÉƒAƒbƒvƒ[ƒh‰Â”\
 
-## ğŸ“„ ãƒ©ã‚¤ã‚»ãƒ³ã‚¹
+## ?? ƒ‰ƒCƒZƒ“ƒX
 
 MIT License
 
-## ğŸ‘©â€ğŸ’» ä½œæˆè€…
+## ????? ì¬Ò
 
-**æ—åŸæ„›** (gumigumih)
+**—ÑŒ´ˆ¤** (gumigumih)
 - note: https://note.com/gumigumih
 - GitHub: https://github.com/gumigumih
 - X: https://twitter.com/gumigumih 
+
+
