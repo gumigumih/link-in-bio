@@ -2,8 +2,12 @@
 import '../styles/tailwind.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'aos/dist/aos.css';
-import ArticleList from '../components/ArticleList.astro';
-import LatestNote from '../components/LatestNote.astro';
+import aosScript from '../scripts/aos.ts?url';
+import ContactSection from '../components/ContactSection.astro';
+import FooterSection from '../components/FooterSection.astro';
+import LatestNoteSection from '../components/LatestNoteSection.astro';
+import LinksSection from '../components/LinksSection.astro';
+import ProfileSection from '../components/ProfileSection.astro';
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -27,7 +31,6 @@ import LatestNote from '../components/LatestNote.astro';
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Zen+Maru+Gothic:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
   <body class="relative min-h-screen text-gray-800 font-['Raleway']" id="app">
     <div class="fixed inset-0 bg-gradient-to-br from-rose-50 via-white to-amber-100"></div>
@@ -40,212 +43,12 @@ import LatestNote from '../components/LatestNote.astro';
     <div
       class="relative min-h-screen flex flex-col items-center justify-center py-20 px-4"
     >
-      <!-- Profile Section -->
-      <div class="w-full max-w-4xl">
-        <div class="relative overflow-hidden rounded-3xl bg-white/85 backdrop-blur-xl border border-pink-200/70 shadow-lg shadow-pink-100/60 px-6 py-8 md:px-10 md:py-10">
-          <div class="absolute inset-0 pointer-events-none z-0">
-            <div class="absolute inset-0 border border-white/60 rounded-3xl"></div>
-            <div class="absolute -top-px left-8 w-24 h-px bg-gradient-to-r from-pink-400/70 to-transparent"></div>
-            <div class="absolute bottom-6 -right-px h-24 w-px bg-gradient-to-b from-amber-400/70 to-transparent"></div>
-          </div>
-          <div class="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
-            <div class="relative group">
-              <div class="absolute -inset-1 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
-              <img
-                src="/assets/images/profile.jpg"
-                alt="Profile Picture"
-                class="relative w-36 h-36 md:w-44 md:h-44 rounded-full object-cover ring-4 ring-white/70 flex-shrink-0 transform transition duration-300 group-hover:scale-105"
-              />
-            </div>
-            <div class="text-center md:text-left space-y-5 flex-1">
-              <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/85 backdrop-blur border border-pink-200/70 shadow-sm shadow-pink-100/70 -ml-5">
-                <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-pink-500 to-amber-400 text-white text-[10px] shadow-sm">
-                  PM
-                </span>
-                <span class="hidden md:inline text-[11px] font-medium text-gray-600">Technical PM / Experience Design</span>
-              </div>
-              <div>
-                <p
-                  class="text-xs font-['Zen_Maru_Gothic'] text-gray-500 tracking-[0.8em]"
-                >
-                  はやしばらめぐみ
-                </p>
-                <h1
-                  class="text-4xl md:text-5xl font-bold font-['Zen_Maru_Gothic'] bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent tracking-[0.18em]"
-                >
-                  林原愛
-                </h1>
-                <p
-                  class="font-['Zen_Maru_Gothic'] text-gray-600 font-medium tracking-[0.4em] mt-1 -ml-1"
-                >
-                  （本名：和田愛）
-                </p>
-              </div>
-              <div class="space-y-1">
-                <p class="font-['Zen_Maru_Gothic'] text-gray-600 text-sm font-semibold tracking-wide">図解で考えるテクニカルPM</p>
-                <p class="font-['Zen_Maru_Gothic'] text-gray-600 text-sm leading-relaxed">
-                  図解で仕様を整理し、実装の再構築を行っています。
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Links Section -->
-      <div class="mt-10 md:mt-12 w-full max-w-2xl" data-aos="fade-up" data-aos-delay="0">
-        <h2
-          class="text-xl font-bold mb-6 md:mb-8 text-center text-gray-700 relative tracking-wider"
-        >
-          <span class="relative z-10">Links</span>
-          <div
-            class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"
-          ></div>
-        </h2>
-        <div class="space-y-3">
-          <a
-            href="https://note.com/gumigumih"
-                class="group flex items-center justify-between bg-white/80 backdrop-blur-md border border-white/70 px-5 py-4 rounded-2xl shadow-lg shadow-pink-100/60 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300"
-          >
-            <div class="flex items-center gap-3">
-              <img src="/assets/images/note-icon.svg" alt="note" class="h-8 w-8" />
-              <div class="text-left">
-                <p class="font-['Zen_Maru_Gothic'] text-sm text-gray-600">最新記事はこちら</p>
-                <p class="font-['Zen_Maru_Gothic'] text-base font-semibold text-gray-800">note</p>
-              </div>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square text-gray-500 group-hover:text-gray-700 transition-colors duration-300"></i>
-          </a>
-          <a
-            href="https://twitter.com/gumigumih"
-            class="group flex items-center justify-between bg-white/80 backdrop-blur-md border border-white/70 px-5 py-4 rounded-2xl shadow-lg shadow-pink-100/60 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300"
-          >
-            <div class="flex items-center gap-3">
-              <i class="fa-brands fa-x-twitter text-2xl text-gray-800"></i>
-              <div class="text-left">
-                <p class="font-['Zen_Maru_Gothic'] text-sm text-gray-600">日々のつぶやき</p>
-                <p class="text-base font-semibold text-gray-800">X (Twitter)</p>
-              </div>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square text-gray-500 group-hover:text-gray-700 transition-colors duration-300"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/gumigumih"
-            class="group flex items-center justify-between bg-white/80 backdrop-blur-md border border-white/70 px-5 py-4 rounded-2xl shadow-lg shadow-pink-100/60 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300"
-          >
-            <div class="flex items-center gap-3">
-              <i class="fa-brands fa-instagram text-2xl text-gray-800"></i>
-              <div class="text-left">
-                <p class="font-['Zen_Maru_Gothic'] text-sm text-gray-600">日常の写真と記録</p>
-                <p class="text-base font-semibold text-gray-800">Instagram</p>
-              </div>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square text-gray-500 group-hover:text-gray-700 transition-colors duration-300"></i>
-          </a>
-          <a
-            href="https://github.com/gumigumih"
-            class="group flex items-center justify-between bg-white/80 backdrop-blur-md border border-white/70 px-5 py-4 rounded-2xl shadow-lg shadow-pink-100/60 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300"
-          >
-            <div class="flex items-center gap-3">
-              <i class="fa-brands fa-github text-2xl text-gray-800"></i>
-              <div class="text-left">
-                <p class="font-['Zen_Maru_Gothic'] text-sm text-gray-600">つくったもの</p>
-                <p class="text-base font-semibold text-gray-800">GitHub</p>
-              </div>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square text-gray-500 group-hover:text-gray-700 transition-colors duration-300"></i>
-          </a>
-          <a
-            href="https://zenn.dev/gumigumih"
-            class="group flex items-center justify-between bg-white/80 backdrop-blur-md border border-white/70 px-5 py-4 rounded-2xl shadow-lg shadow-pink-100/60 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300"
-          >
-            <div class="flex items-center gap-3">
-              <img src="/assets/images/zenn-logo.svg" alt="Zenn" class="h-7 w-7" />
-              <div class="text-left">
-                <p class="font-['Zen_Maru_Gothic'] text-sm text-gray-600">技術系の記事</p>
-                <p class="text-base font-semibold text-gray-800">Zenn</p>
-              </div>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square text-gray-500 group-hover:text-gray-700 transition-colors duration-300"></i>
-          </a>
-          <a
-            href="https://qiita.com/gumigumih"
-            class="group flex items-center justify-between bg-white/80 backdrop-blur-md border border-white/70 px-5 py-4 rounded-2xl shadow-lg shadow-pink-100/60 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300"
-          >
-            <div class="flex items-center gap-3">
-              <img src="/assets/images/qiita-icon.png" alt="Qiita" class="h-7 w-7 rounded" />
-              <div class="text-left">
-                <p class="font-['Zen_Maru_Gothic'] text-sm text-gray-600">実装メモと小ネタ</p>
-                <p class="text-base font-semibold text-gray-800">Qiita</p>
-              </div>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square text-gray-500 group-hover:text-gray-700 transition-colors duration-300"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Latest from note Section -->
-      <div class="w-full max-w-2xl mt-12 md:mt-14" data-aos="fade-up" data-aos-delay="0">
-        <h2
-          class="text-xl font-bold mb-6 md:mb-8 text-center text-gray-700 relative tracking-wider"
-        >
-          <span class="relative z-10">Latest on note</span>
-          <div
-            class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"
-          ></div>
-        </h2>
-        <LatestNote />
-      </div>
-
-      <!-- Contact Section -->
-      <div class="w-full max-w-2xl mt-10 md:mt-12" data-aos="fade-up" data-aos-delay="0">
-        <h2
-          class="text-xl font-bold mb-6 md:mb-8 text-center text-gray-700 relative tracking-wider"
-        >
-          <span class="relative z-10">Contact</span>
-          <div
-            class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"
-          ></div>
-        </h2>
-        <div class="space-y-4">
-          <a
-            href="https://meggumi.com/#contact"
-            class="group flex items-center justify-between bg-gradient-to-r from-pink-500 to-yellow-500 text-white px-5 py-4 rounded-2xl shadow-sm hover:scale-[1.02] hover:shadow-lg transition-all duration-300"
-          >
-            <div class="flex items-center gap-3">
-              <i class="fa-solid fa-envelope text-2xl"></i>
-              <div class="text-left">
-                <p class="font-['Zen_Maru_Gothic'] text-sm opacity-90">相談・連絡はこちら</p>
-                <p class="text-base font-semibold">Contact Form</p>
-              </div>
-            </div>
-            <i class="fa-solid fa-arrow-right text-xl"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Footer Section -->
-      <footer
-        class="mt-12 md:mt-16 text-center"
-        data-aos="fade-up"
-        data-aos-delay="0"
-      >
-        <div class="mb-6 max-w-2xl mx-auto">
-          <p class="font-['Zen_Maru_Gothic'] text-gray-700 mb-2">読んでくれてありがとう</p>
-          <p class="font-['Zen_Maru_Gothic'] text-sm text-gray-600">お気軽にお声がけください！</p>
-        </div>
-        <p class="font-['Zen_Maru_Gothic'] text-gray-500 text-xs">&copy; 2025 林原愛</p>
-      </footer>
+      <ProfileSection />
+      <LinksSection />
+      <LatestNoteSection />
+      <ContactSection />
+      <FooterSection />
     </div>
-    <script>
-      import AOS from 'aos'
-
-      AOS.init({
-        duration: 700,
-        easing: 'ease-out-cubic',
-        once: true,
-        offset: 80,
-      })
-    </script>
+    <script type="module" src={aosScript}></script>
   </body>
 </html>
