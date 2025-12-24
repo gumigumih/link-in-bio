@@ -1,5 +1,8 @@
 ﻿---
 import '../styles/tailwind.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'aos/dist/aos.css';
+import ArticleList from '../components/ArticleList.astro';
 import LatestNote from '../components/LatestNote.astro';
 ---
 <!DOCTYPE html>
@@ -20,17 +23,11 @@ import LatestNote from '../components/LatestNote.astro';
 
       gtag('config', 'G-VZB3MLS9Q1');
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      rel="stylesheet"
-    />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Zen+Maru+Gothic:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/css/styles.css" />
-    <script type="module" src="/assets/js/app.js"></script>
   </head>
   <body class="relative min-h-screen text-gray-800 font-['Raleway']" id="app">
     <div class="fixed inset-0 bg-gradient-to-br from-rose-50 via-white to-amber-100"></div>
@@ -96,7 +93,7 @@ import LatestNote from '../components/LatestNote.astro';
       </div>
 
       <!-- Links Section -->
-      <div class="mt-10 md:mt-12 w-full max-w-2xl animate-fade-in" style="animation-delay: 0.2s">
+      <div class="mt-10 md:mt-12 w-full max-w-2xl" data-aos="fade-up" data-aos-delay="0">
         <h2
           class="text-xl font-bold mb-6 md:mb-8 text-center text-gray-700 relative tracking-wider"
         >
@@ -188,7 +185,7 @@ import LatestNote from '../components/LatestNote.astro';
       </div>
 
       <!-- Latest from note Section -->
-      <div class="animate-fade-in w-full max-w-2xl mt-12 md:mt-14" style="animation-delay: 0.4s">
+      <div class="w-full max-w-2xl mt-12 md:mt-14" data-aos="fade-up" data-aos-delay="0">
         <h2
           class="text-xl font-bold mb-6 md:mb-8 text-center text-gray-700 relative tracking-wider"
         >
@@ -201,7 +198,7 @@ import LatestNote from '../components/LatestNote.astro';
       </div>
 
       <!-- Contact Section -->
-      <div class="animate-fade-in w-full max-w-2xl mt-10 md:mt-12" style="animation-delay: 0.5s">
+      <div class="w-full max-w-2xl mt-10 md:mt-12" data-aos="fade-up" data-aos-delay="0">
         <h2
           class="text-xl font-bold mb-6 md:mb-8 text-center text-gray-700 relative tracking-wider"
         >
@@ -229,8 +226,9 @@ import LatestNote from '../components/LatestNote.astro';
 
       <!-- Footer Section -->
       <footer
-        class="mt-12 md:mt-16 text-center animate-fade-in"
-        style="animation-delay: 0.6s"
+        class="mt-12 md:mt-16 text-center"
+        data-aos="fade-up"
+        data-aos-delay="0"
       >
         <div class="mb-6 max-w-2xl mx-auto">
           <p class="font-['Zen_Maru_Gothic'] text-gray-700 mb-2">読んでくれてありがとう</p>
@@ -239,5 +237,15 @@ import LatestNote from '../components/LatestNote.astro';
         <p class="font-['Zen_Maru_Gothic'] text-gray-500 text-xs">&copy; 2025 林原愛</p>
       </footer>
     </div>
+    <script>
+      import AOS from 'aos'
+
+      AOS.init({
+        duration: 700,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 80,
+      })
+    </script>
   </body>
 </html>
