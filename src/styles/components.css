@@ -41,3 +41,66 @@
 .animate-fade-in.visible {
   animation: fadeIn 0.8s ease-out forwards;
 }
+
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 24vh, 0) scale(0.82) rotate(-8deg);
+  }
+  10% {
+    opacity: 0.55;
+    transform: translate3d(calc(var(--drift) * 0.18), 12vh, 0) scale(0.9) rotate(calc(var(--spin) * 0.22));
+  }
+  28% {
+    opacity: 0.9;
+    transform: translate3d(calc(var(--drift) * 0.45), -8vh, 0) scale(1) rotate(calc(var(--spin) * 0.48));
+  }
+  52% {
+    opacity: 0.5;
+    transform: translate3d(calc(var(--drift) * -0.12), -42vh, 0) scale(1.06) rotate(calc(var(--spin) * 0.7));
+  }
+  74% {
+    opacity: 0.72;
+    transform: translate3d(calc(var(--drift) * 0.85), -78vh, 0) scale(1.02) rotate(calc(var(--spin) * 0.9));
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--drift), -132vh, 0) scale(1.1) rotate(var(--spin));
+  }
+}
+
+.floating-social-icon {
+  position: absolute;
+  bottom: -18vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  filter: drop-shadow(0 10px 18px rgba(244, 114, 182, 0.16));
+  animation-name: floatUp;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.floating-social-icon img,
+.floating-social-icon i {
+  display: block;
+}
+
+.floating-social-icon--note {
+  opacity: 0.95;
+}
+
+.floating-social-icon--qiita {
+  opacity: 0.9;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-social-icon {
+    animation: none;
+    opacity: 0.12;
+    transform: none;
+  }
+}

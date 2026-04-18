@@ -15,7 +15,6 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "update-articles": "node scripts/update-articles.js",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
